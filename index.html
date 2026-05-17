@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Tracker — Google CE Goal</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue:       #1A6FBF;
+    --blue-light: #EBF3FC;
+    --blue-dark:  #0C447C;
+    --teal:       #0F7A60;
+    --teal-light: #E1F5EE;
+    --teal-dark:  #085041;
+    --amber:      #B85D0D;
+    --amber-light:#FEF3E2;
+    --amber-dark: #633806;
+    --gray:       #6B6A66;
+    --gray-light: #F3F2EE;
+    --gray-dark:  #3D3C3A;
+    --red:        #C0392B;
+    --red-light:  #FDECEB;
+    --bg:         #F7F7F5;
+    --surface:    #FFFFFF;
+    --border:     #E5E4DF;
+    --text:       #1A1917;
+    --muted:      #6B6A66;
+    --radius:     12px;
+    --radius-sm:  8px;
+    --shadow:     0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+    --shadow-md:  0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* ── Layout ── */
+  .page { max-width: 780px; margin: 0 auto; padding: 32px 16px 80px; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0C447C 0%, #1A6FBF 60%, #2490E0 100%);
+    border-radius: var(--radius);
+    padding: 28px 28px 24px;
+    margin-bottom: 24px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: 60px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.04);
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 6px;
+  }
+  .hero h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero h1 em { font-style: normal; opacity: .75; }
+  .hero-stats { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hstat {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 8px;
+    padding: 8px 14px;
+    min-width: 90px;
+  }
+  .hstat-val { font-size: 20px; font-weight: 700; line-height: 1; }
+  .hstat-lbl { font-size: 10px; opacity: .7; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+
+  /* ── Progress bar ── */
+  .progress-wrap { margin-top: 16px; }
+  .progress-lbl { font-size: 10px; opacity: .65; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 5px; display: flex; justify-content: space-between; }
+  .progress-track { height: 5px; background: rgba(255,255,255,.2); border-radius: 99px; overflow: hidden; }
+  .progress-fill { height: 100%; background: rgba(255,255,255,.8); border-radius: 99px; transition: width .4s ease; width: 0%; }
+
+  /* ── Toolbar ── */
+  .toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-btn {
+    font-size: 12px; font-weight: 500;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+  .filter-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .toolbar-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+  .collapse-all-btn {
+    font-size: 12px; padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .collapse-all-btn:hover { border-color: var(--text); color: var(--text); }
+
+  /* ── Section label ── */
+  .section-lbl {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin: 24px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-lbl::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* ── App card ── */
+  .app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .app-card:hover { box-shadow: var(--shadow-md); }
+  .app-card[data-status="Applied"]     { border-left: 3px solid var(--teal); }
+  .app-card[data-status="Interviewing"]{ border-left: 3px solid var(--amber); }
+  .app-card[data-status="Offer"]       { border-left: 3px solid #27AE60; }
+  .app-card[data-status="Declined"]    { border-left: 3px solid var(--red); opacity: .6; }
+  .app-card.priority-1 { --accent: var(--blue); --accent-light: var(--blue-light); --accent-dark: var(--blue-dark); }
+  .app-card.priority-2 { --accent: var(--teal); --accent-light: var(--teal-light); --accent-dark: var(--teal-dark); }
+  .app-card.priority-3 { --accent: var(--amber); --accent-light: var(--amber-light); --accent-dark: var(--amber-dark); }
+  .app-card.priority-4 { --accent: var(--gray); --accent-light: var(--gray-light); --accent-dark: var(--gray-dark); }
+
+  .app-card[data-status="Not started"].priority-1 { border-left: 3px solid var(--blue); }
+  .app-card[data-status="Not started"].priority-2 { border-left: 3px solid var(--teal); }
+  .app-card[data-status="Not started"].priority-3 { border-left: 3px solid var(--amber); }
+  .app-card[data-status="Not started"].priority-4 { border-left: 3px solid var(--gray); }
+  .app-card[data-status="Researching"].priority-1 { border-left: 3px solid var(--blue); }
+  .app-card[data-status="Researching"].priority-2 { border-left: 3px solid var(--teal); }
+  .app-card[data-status="Researching"].priority-3 { border-left: 3px solid var(--amber); }
+  .app-card[data-status="Researching"].priority-4 { border-left: 3px solid var(--gray); }
+
+  .app-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background .15s;
+  }
+  .app-row:hover { background: #FAFAF8; }
+
+  .rank {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    flex-shrink: 0;
+    background: var(--accent-light);
+    color: var(--accent-dark);
+  }
+
+  .app-main { flex: 1; min-width: 0; }
+  .app-name {
+    font-size: 14px; font-weight: 600;
+    color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    margin-bottom: 2px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .app-co { font-size: 12px; color: var(--muted); }
+
+  .app-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+
+  .deadline-badge {
+    font-size: 11px; font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+  .d-urgent   { background: var(--red-light); color: var(--red); }
+  .d-soon     { background: var(--amber-light); color: var(--amber); }
+  .d-open     { background: var(--teal-light); color: var(--teal-dark); }
+  .d-rolling  { background: var(--gray-light); color: var(--gray-dark); }
+
+  .status-select {
+    font-size: 11px; font-weight: 500;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--muted);
+    padding: 3px 8px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color .15s;
+  }
+  .status-select:focus { border-color: var(--blue); }
+  .status-select:hover { border-color: var(--text); }
+
+  .chevron {
+    width: 16px; height: 16px;
+    flex-shrink: 0;
+    color: var(--muted);
+    transition: transform .25s ease;
+  }
+  .chevron.open { transform: rotate(180deg); }
+
+  /* ── Google tag ── */
+  .google-tag {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 10px; font-weight: 600;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    padding: 2px 7px;
+    border-radius: 99px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── Expanded panel ── */
+  .expand {
+    display: none;
+    border-top: 1px solid var(--border);
+    background: #FAFAF8;
+    padding: 16px 16px 18px;
+    animation: slideDown .2s ease;
+  }
+  .expand.open { display: block; }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    margin-bottom: 14px;
+  }
+  @media (max-width: 520px) { .exp-grid { grid-template-columns: 1fr; } }
+
+  .exp-row { font-size: 12px; }
+  .exp-lbl { color: var(--muted); display: block; margin-bottom: 2px; font-size: 11px; }
+  .exp-val { color: var(--text); font-weight: 500; }
+
+  .exp-steps { margin: 2px 0 14px; }
+  .step-item {
+    display: flex; gap: 8px;
+    font-size: 12px; color: var(--muted);
+    margin-bottom: 6px;
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+    background: var(--accent);
+  }
+
+  /* ── Notes ── */
+  .notes-wrap { margin-top: 12px; }
+  .notes-lbl { font-size: 11px; color: var(--muted); margin-bottom: 4px; font-weight: 500; }
+  .notes-input {
+    width: 100%;
+    font-size: 12px;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 10px;
+    resize: vertical;
+    min-height: 60px;
+    outline: none;
+    transition: border-color .15s;
+    line-height: 1.5;
+  }
+  .notes-input:focus { border-color: var(--blue); }
+  .notes-input::placeholder { color: #B0AFA9; }
+
+  /* ── Expand footer ── */
+  .exp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; flex-wrap: wrap; gap: 8px; }
+  .ask-btn {
+    font-size: 12px; font-weight: 500;
+    color: var(--blue);
+    border: 1px solid var(--blue-light);
+    border-radius: 8px;
+    padding: 6px 14px;
+    background: var(--blue-light);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .ask-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+  /* ── Timeline ── */
+  .timeline-section { margin-top: 32px; }
+  .timeline-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .tl-month { display: flex; gap: 14px; margin-bottom: 14px; }
+  .tl-lbl { font-size: 11px; font-weight: 600; color: var(--muted); min-width: 68px; padding-top: 3px; white-space: nowrap; }
+  .tl-events { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tl-pill {
+    font-size: 11px; font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+  }
+  .tl-blue   { background: var(--blue-light);  color: var(--blue-dark); }
+  .tl-teal   { background: var(--teal-light);  color: var(--teal-dark); }
+  .tl-amber  { background: var(--amber-light); color: var(--amber-dark); }
+  .tl-gray   { background: var(--gray-light);  color: var(--gray-dark); }
+  .tl-divider { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+
+  /* ── Empty state ── */
+  .empty-state { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
+
+  /* ── Status dot in select ── */
+  .status-Applied     { color: var(--teal); }
+  .status-Interviewing{ color: var(--amber); }
+  .status-Offer       { color: #27AE60; }
+  .status-Declined    { color: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-eyebrow">Internship Application Tracker</div>
+    <h1>Goal: <em>Google Customer Engineer</em> by Graduation</h1>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-val" id="total-count">7</div>
+        <div class="hstat-lbl">Total</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val" id="applied-count">0</div>
+        <div class="hstat-lbl">Active</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val" id="offer-count">0</div>
+        <div class="hstat-lbl">Offers</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-val" id="interview-count">0</div>
+        <div class="hstat-lbl">Interviews</div>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-lbl">
+        <span>APPLICATIONS ACTIVE</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+    <button class="filter-btn" onclick="setFilter('1', this)">Tier 1</button>
+    <button class="filter-btn" onclick="setFilter('2', this)">Tier 2</button>
+    <button class="filter-btn" onclick="setFilter('3', this)">Tier 3</button>
+    <button class="filter-btn" onclick="setFilter('4', this)">Backup</button>
+    <div class="toolbar-right">
+      <button class="collapse-all-btn" onclick="collapseAll()">Collapse all</button>
+    </div>
+  </div>
+
+  <!-- Tier 1 -->
+  <p class="section-lbl" data-tier="1">Tier 1 — Direct path to Google CE</p>
+
+  <div class="app-card priority-1" id="card-a1" data-tier="1" data-status="Not started">
+    <div class="app-row" onclick="toggle('a1')">
+      <div class="rank">1</div>
+      <div class="app-main">
+        <p class="app-name">
+          AWS Solutions Architect Intern
+          <span class="google-tag">→ Google CE</span>
+        </p>
+        <p class="app-co">Amazon Web Services &nbsp;·&nbsp; 12 weeks &nbsp;·&nbsp; Paid</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-open">Apply Aug–Oct 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a1" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a1-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a1">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's #1</span><span class="exp-val">Literally the same job as CE — customer solutions, stakeholder calls, cloud architecture</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">AWS SA intern → return offer → transfer to Google Cloud CE later</span></div>
+        <div class="exp-row"><span class="exp-lbl">Eligibility</span><span class="exp-val">Rising senior graduating Dec 2026 – Sep 2027</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Yes — direct pipeline to Associate SA full-time</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at amazon.jobs — search "Solutions Architect Intern"</span></div>
+        <div class="step-item"><span class="dot"></span><span>Interview: 2 back-to-back rounds — behavioral (STAR format) + basic cloud/AI tech questions</span></div>
+        <div class="step-item"><span class="dot"></span><span>Prep: get AWS Cloud Practitioner cert, know Python basics, have 1 AI project on GitHub</span></div>
+        <div class="step-item"><span class="dot"></span><span>Leverage Citibank: "I've seen how financial enterprises struggle with cloud adoption — I want to solve that"</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a1" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a1', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('What do I need to prepare specifically to get the AWS Solutions Architect internship as a rising senior at UT Austin?')">How to prepare ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-card priority-1" id="card-a2" data-tier="1" data-status="Not started">
+    <div class="app-row" onclick="toggle('a2')">
+      <div class="rank">2</div>
+      <div class="app-main">
+        <p class="app-name">
+          Google BOLD Intern — gTech / Sales
+          <span class="google-tag">→ Google CE direct</span>
+        </p>
+        <p class="app-co">Google &nbsp;·&nbsp; 11 weeks &nbsp;·&nbsp; Paid &nbsp;·&nbsp; Rising senior only</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-urgent">Apply Oct–Nov 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a2" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a2-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a2">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's #2</span><span class="exp-val">Most direct Google path — BOLD gTech/Sales interns convert to full-time CE roles</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">BOLD intern → return offer → full-time CE or Cloud Technical Residency</span></div>
+        <div class="exp-row"><span class="exp-lbl">Eligibility</span><span class="exp-val">Must be in 3rd year of 4-year degree — that's you next fall</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Performance-based — no guarantee but well-documented pipeline</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at careers.google.com — search "BOLD Intern" in October 2026, apply immediately when it opens</span></div>
+        <div class="step-item"><span class="dot"></span><span>Select gTech or Sales as preferred team — NOT marketing or people ops</span></div>
+        <div class="step-item"><span class="dot"></span><span>No essay required — resume + transcript + team preference</span></div>
+        <div class="step-item"><span class="dot"></span><span>Network now: find BOLD alumni on LinkedIn and do informational calls this summer</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a2" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a2', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('How do I network with Google BOLD alumni to maximize my chances this fall?')">How to network for BOLD ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 2 -->
+  <p class="section-lbl" data-tier="2">Tier 2 — Strong alternatives, great for Google resume</p>
+
+  <div class="app-card priority-2" id="card-a3" data-tier="2" data-status="Not started">
+    <div class="app-row" onclick="toggle('a3')">
+      <div class="rank">3</div>
+      <div class="app-main">
+        <p class="app-name">Microsoft Business Intern — Azure AI / Cloud Sales</p>
+        <p class="app-co">Microsoft &nbsp;·&nbsp; 12 weeks &nbsp;·&nbsp; Paid</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-open">Apply Sep–Nov 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a3" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a3-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a3">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's #3</span><span class="exp-val">Azure CE experience transfers directly to Google Cloud CE — same skills, same clients</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">Microsoft full-time → lateral hire to Google Cloud CE (extremely common)</span></div>
+        <div class="exp-row"><span class="exp-lbl">Key move</span><span class="exp-val">Specify Azure AI or Cloud Sales as preferred area in application</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Yes — Microsoft has strong return offer culture</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at careers.microsoft.com — filter by "business" and "student"</span></div>
+        <div class="step-item"><span class="dot"></span><span>Target Azure or Microsoft AI teams specifically in your application preferences</span></div>
+        <div class="step-item"><span class="dot"></span><span>Interview: behavioral + case study style, know Microsoft's AI products (Copilot, Azure OpenAI)</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a3" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a3', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('How do I get placed on an Azure AI team as a Microsoft business intern?')">How to target Azure AI ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-card priority-2" id="card-a4" data-tier="2" data-status="Not started">
+    <div class="app-row" onclick="toggle('a4')">
+      <div class="rank">4</div>
+      <div class="app-main">
+        <p class="app-name">Salesforce Solutions Engineer Intern</p>
+        <p class="app-co">Salesforce &nbsp;·&nbsp; 12 weeks &nbsp;·&nbsp; Paid &nbsp;·&nbsp; Agentforce AI team</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-open">Apply Sep–Nov 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a4" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a4-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a4">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's #4</span><span class="exp-val">SE intern = exact same role as CE. Agentforce is their new AI product — very relevant</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">Salesforce SE full-time → Google Cloud CE lateral hire (very common path)</span></div>
+        <div class="exp-row"><span class="exp-lbl">Bonus</span><span class="exp-val">Salesforce has 1,000 FDE hiring commitment — future FDE path opens up</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Yes — strong return offer culture</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at salesforce.com/careers — search "Solutions Engineer Intern"</span></div>
+        <div class="step-item"><span class="dot"></span><span>Interview: technical demo + behavioral — practice explaining a product to a non-technical person</span></div>
+        <div class="step-item"><span class="dot"></span><span>Know Agentforce and Salesforce Einstein AI basics before interviewing</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a4" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a4', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('What does a Salesforce Solutions Engineer intern actually do day to day?')">What the job looks like ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 3 -->
+  <p class="section-lbl" data-tier="3">Tier 3 — Good backups, still builds the right experience</p>
+
+  <div class="app-card priority-3" id="card-a5" data-tier="3" data-status="Not started">
+    <div class="app-row" onclick="toggle('a5')">
+      <div class="rank">5</div>
+      <div class="app-main">
+        <p class="app-name">Google Cloud Technical Residency (CTR) <span class="google-tag">→ Google direct</span></p>
+        <p class="app-co">Google &nbsp;·&nbsp; 12 months post-grad &nbsp;·&nbsp; Full-time rotational</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-rolling">Apply senior year</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a5" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a5-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a5">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">What it is</span><span class="exp-val">1-year rotational program — rotate through CE, TSE, and TAM roles at Google Cloud</span></div>
+        <div class="exp-row"><span class="exp-lbl">Why it's here</span><span class="exp-val">Safety net — if no summer internship converts, apply to CTR as a new grad</span></div>
+        <div class="exp-row"><span class="exp-lbl">Outcome</span><span class="exp-val">Converts to full-time CE or TSE at Google after 12 months</span></div>
+        <div class="exp-row"><span class="exp-lbl">Apply when</span><span class="exp-val">Fall of senior year (same time as other new grad roles)</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at careers.google.com — search "Cloud Technical Residency"</span></div>
+        <div class="step-item"><span class="dot"></span><span>This is your backup if BOLD doesn't result in a return offer</span></div>
+        <div class="step-item"><span class="dot"></span><span>Any cloud/SE internship experience makes your CTR app significantly stronger</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a5" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a5', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('Tell me more about the Google Cloud Technical Residency and how to get in as a new grad.')">CTR details ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-card priority-3" id="card-a6" data-tier="3" data-status="Not started">
+    <div class="app-row" onclick="toggle('a6')">
+      <div class="rank">6</div>
+      <div class="app-main">
+        <p class="app-name">Databricks — Solutions / FDE Intern</p>
+        <p class="app-co">Databricks &nbsp;·&nbsp; 12 weeks &nbsp;·&nbsp; Paid &nbsp;·&nbsp; AI + data platform</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-open">Apply Sep–Nov 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a6" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a6-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a6">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's here</span><span class="exp-val">Best FDE entry point — data + AI focus, Citibank background is a huge advantage</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">Databricks full-time → Google Cloud CE lateral hire, or stay for FDE track</span></div>
+        <div class="exp-row"><span class="exp-lbl">Citibank fit</span><span class="exp-val">Excellent — financial data is Databricks' core market</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Yes — fast-growing, hire aggressively</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at databricks.com/company/careers — search "intern" or "solutions"</span></div>
+        <div class="step-item"><span class="dot"></span><span>Know Python and basic SQL — data pipeline knowledge is a plus</span></div>
+        <div class="step-item"><span class="dot"></span><span>Citibank pitch: "I understand how financial enterprises manage and struggle with data at scale"</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a6" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a6', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('Does Databricks have a solutions or FDE internship for undergrad students?')">Databricks intern options ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 4 -->
+  <p class="section-lbl" data-tier="4">Backup — Consulting bridge to tech</p>
+
+  <div class="app-card priority-4" id="card-a7" data-tier="4" data-status="Not started">
+    <div class="app-row" onclick="toggle('a7')">
+      <div class="rank">7</div>
+      <div class="app-main">
+        <p class="app-name">Deloitte / Accenture — AI Technology Consulting Intern</p>
+        <p class="app-co">Big 4 consulting &nbsp;·&nbsp; 10–12 weeks &nbsp;·&nbsp; Paid</p>
+      </div>
+      <div class="app-meta">
+        <span class="deadline-badge d-rolling">Apply Aug–Oct 2026</span>
+        <select class="status-select" onchange="updateStatus(this)" data-id="a7" onclick="event.stopPropagation()">
+          <option>Not started</option>
+          <option>Researching</option>
+          <option>Applied</option>
+          <option>Interviewing</option>
+          <option>Offer</option>
+          <option>Declined</option>
+        </select>
+      </div>
+      <svg class="chevron" id="a7-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 6 8 10 12 6"/></svg>
+    </div>
+    <div class="expand" id="a7">
+      <div class="exp-grid">
+        <div class="exp-row"><span class="exp-lbl">Why it's here</span><span class="exp-val">Strongest backup — finance AI consulting, Citibank background is elite here</span></div>
+        <div class="exp-row"><span class="exp-lbl">Google path</span><span class="exp-val">Big 4 AI consulting → Google Cloud CE lateral hire (consulting → tech is well-worn)</span></div>
+        <div class="exp-row"><span class="exp-lbl">Citibank fit</span><span class="exp-val">Excellent — finance is their biggest vertical</span></div>
+        <div class="exp-row"><span class="exp-lbl">Return offer?</span><span class="exp-val">Yes — structured new grad programs</span></div>
+      </div>
+      <div class="exp-steps">
+        <div class="step-item"><span class="dot"></span><span>Apply at deloitte.com/careers or accenture.com/careers — search "technology consulting intern"</span></div>
+        <div class="step-item"><span class="dot"></span><span>Interview: case interview + behavioral — practice consulting case frameworks</span></div>
+        <div class="step-item"><span class="dot"></span><span>Apply earlier than tech companies — Big 4 recruiting starts August</span></div>
+      </div>
+      <div class="notes-wrap">
+        <div class="notes-lbl">Your notes</div>
+        <textarea class="notes-input" id="notes-a7" placeholder="Track contacts, interview dates, next steps…" onclick="event.stopPropagation()" oninput="saveNotes('a7', this.value)"></textarea>
+      </div>
+      <div class="exp-footer">
+        <button class="ask-btn" onclick="sendPrompt('How does an AI consulting internship at Deloitte lead to a Google Cloud CE role?')">Big 4 to Google path ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-section">
+    <p class="section-lbl">Application timeline — Fall 2026</p>
+    <div class="timeline-card">
+      <div class="tl-month">
+        <span class="tl-lbl">Aug 2026</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-gray">Deloitte / Accenture open</span>
+          <span class="tl-pill tl-blue">AWS opens — watch closely</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">Sep 2026</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">AWS — apply now</span>
+          <span class="tl-pill tl-teal">Microsoft opens</span>
+          <span class="tl-pill tl-teal">Salesforce opens</span>
+          <span class="tl-pill tl-amber">Databricks opens</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">Oct 2026</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">Google BOLD opens — apply day 1</span>
+          <span class="tl-pill tl-blue">AWS deadline approaching</span>
+          <span class="tl-pill tl-gray">Big 4 interviews begin</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">Nov 2026</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">Google BOLD deadline (Nov 12)</span>
+          <span class="tl-pill tl-teal">Microsoft / Salesforce close</span>
+          <span class="tl-pill tl-blue">AWS interviews rolling</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">Dec–Apr</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">Google BOLD interviews rolling</span>
+          <span class="tl-pill tl-blue">AWS offers go out</span>
+          <span class="tl-pill tl-teal">Microsoft / Salesforce offers</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">Summer 2027</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">Intern at your top offer</span>
+          <span class="tl-pill tl-teal">Perform — get return offer</span>
+        </div>
+      </div>
+      <div class="tl-divider"></div>
+      <div class="tl-month">
+        <span class="tl-lbl">May 2028</span>
+        <div class="tl-events">
+          <span class="tl-pill tl-blue">Graduate UT Austin</span>
+          <span class="tl-pill tl-blue">Start at Google (or CTR)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  const IDS = ['a1','a2','a3','a4','a5','a6','a7'];
+  const STORE_STATUS = 'tracker_status_v1';
+  const STORE_NOTES  = 'tracker_notes_v1';
+
+  /* ── Persist & restore ── */
+  function loadData() {
+    const statuses = JSON.parse(localStorage.getItem(STORE_STATUS) || '{}');
+    const notes    = JSON.parse(localStorage.getItem(STORE_NOTES)  || '{}');
+    IDS.forEach(id => {
+      const sel = document.querySelector(`.status-select[data-id="${id}"]`);
+      if (sel && statuses[id]) {
+        sel.value = statuses[id];
+        applyCardStatus(id, statuses[id]);
+      }
+      const ta = document.getElementById('notes-' + id);
+      if (ta && notes[id]) ta.value = notes[id];
+    });
+    refreshStats();
+  }
+
+  function saveNotes(id, val) {
+    const notes = JSON.parse(localStorage.getItem(STORE_NOTES) || '{}');
+    notes[id] = val;
+    localStorage.setItem(STORE_NOTES, JSON.stringify(notes));
+  }
+
+  function applyCardStatus(id, status) {
+    const card = document.getElementById('card-' + id);
+    if (card) card.dataset.status = status;
+  }
+
+  /* ── Stats ── */
+  function refreshStats() {
+    const selects = document.querySelectorAll('.status-select');
+    let active = 0, offers = 0, interviews = 0;
+    selects.forEach(s => {
+      if (['Applied','Interviewing','Offer'].includes(s.value)) active++;
+      if (s.value === 'Offer') offers++;
+      if (s.value === 'Interviewing') interviews++;
+    });
+    document.getElementById('applied-count').textContent   = active;
+    document.getElementById('offer-count').textContent     = offers;
+    document.getElementById('interview-count').textContent = interviews;
+    const pct = Math.round((active / selects.length) * 100);
+    document.getElementById('progress-pct').textContent   = pct + '%';
+    document.getElementById('progress-fill').style.width  = pct + '%';
+  }
+
+  /* ── Status change ── */
+  function updateStatus(sel) {
+    const id = sel.dataset.id;
+    const statuses = JSON.parse(localStorage.getItem(STORE_STATUS) || '{}');
+    statuses[id] = sel.value;
+    localStorage.setItem(STORE_STATUS, JSON.stringify(statuses));
+    applyCardStatus(id, sel.value);
+    refreshStats();
+  }
+
+  /* ── Toggle expand ── */
+  function toggle(id) {
+    const exp  = document.getElementById(id);
+    const chev = document.getElementById(id + '-chev');
+    const isOpen = exp.classList.contains('open');
+    document.querySelectorAll('.expand').forEach(e => e.classList.remove('open'));
+    document.querySelectorAll('.chevron').forEach(c => c.classList.remove('open'));
+    if (!isOpen) {
+      exp.classList.add('open');
+      chev.classList.add('open');
+    }
+  }
+
+  function collapseAll() {
+    document.querySelectorAll('.expand').forEach(e => e.classList.remove('open'));
+    document.querySelectorAll('.chevron').forEach(c => c.classList.remove('open'));
+  }
+
+  /* ── Filter by tier ── */
+  let activeFilter = 'all';
+  function setFilter(tier, btn) {
+    activeFilter = tier;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.app-card').forEach(card => {
+      card.style.display = (tier === 'all' || card.dataset.tier === tier) ? '' : 'none';
+    });
+    document.querySelectorAll('.section-lbl[data-tier]').forEach(lbl => {
+      lbl.style.display = (tier === 'all' || lbl.dataset.tier === tier) ? '' : 'none';
+    });
+    collapseAll();
+  }
+
+  /* ── Ask button ── */
+  function sendPrompt(text) {
+    if (typeof window.claude !== 'undefined' && window.claude.sendPrompt) {
+      window.claude.sendPrompt(text);
+    } else {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard! Paste it into the chat.');
+      }).catch(() => {
+        alert('Prompt: ' + text);
+      });
+    }
+  }
+
+  /* ── Init ── */
+  loadData();
+</script>
+</body>
+</html>
