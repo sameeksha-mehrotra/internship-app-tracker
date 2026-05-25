@@ -29,7 +29,7 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <div id="root"></div>
 <script type="text/babel">
-const { useState, useCallback } = React;
+const { useState, useCallback, useEffect } = React;
 
 /* ═══════════════════════════════════════════════════════════
    TRACK CONFIG — 3 tracks
@@ -873,10 +873,26 @@ function RoadmapTab({ checked, setChecked, skills, onSkillChange }) {
    MAIN APP
 ═══════════════════════════════════════════════════════════ */
 function App() {
-  const [tab, setTab]         = useState("tracker");
-  const [apps, setApps]       = useState(APPS0);
-  const [checked, setChecked] = useState({});
-  const [skills, setSkills]   = useState(SKILLS_BUILD0);
+  const [tab, setTab] = useState("tracker");
+
+  const [apps, setApps] = useState(() => {
+    try { const s = localStorage.getItem('tracker_apps'); return s ? JSON.parse(s) : APPS0; }
+    catch { return APPS0; }
+  });
+
+  const [checked, setChecked] = useState(() => {
+    try { const s = localStorage.getItem('tracker_checked'); return s ? JSON.parse(s) : {}; }
+    catch { return {}; }
+  });
+
+  const [skills, setSkills] = useState(() => {
+    try { const s = localStorage.getItem('tracker_skills'); return s ? JSON.parse(s) : SKILLS_BUILD0; }
+    catch { return SKILLS_BUILD0; }
+  });
+
+  useEffect(() => { localStorage.setItem('tracker_apps', JSON.stringify(apps)); }, [apps]);
+  useEffect(() => { localStorage.setItem('tracker_checked', JSON.stringify(checked)); }, [checked]);
+  useEffect(() => { localStorage.setItem('tracker_skills', JSON.stringify(skills)); }, [skills]);
 
   const onUpdate = useCallback((id, patch) => {
     setApps(prev => prev.map(a => a.id===id ? {...a,...patch} : a));
