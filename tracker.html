@@ -492,12 +492,12 @@ function AppCard({ app, onUpdate, onRemove }) {
   const [open, setOpen] = useState(false);
   const [confirmRemove, setConfirmRemove] = useState(false);
   const tc = T[app.track];
-  const borderCls = app.pulse
-    ? "border-orange-300 bg-orange-50 pulse-card"
-    : app.highlight
-      ? `border-2 ${tc.hlBorder} ${tc.bg}`
-      : app.group === "rejected"
-        ? "border-slate-200 bg-slate-100 opacity-40 grayscale"
+  const borderCls = app.group === "rejected"
+    ? "border-slate-200 bg-slate-100 opacity-50 grayscale"
+    : app.pulse
+      ? "border-orange-300 bg-orange-50 pulse-card"
+      : app.highlight
+        ? `border-2 ${tc.hlBorder} ${tc.bg}`
         : "border-slate-200 bg-white hover:shadow-sm hover:border-slate-300";
 
   return (
