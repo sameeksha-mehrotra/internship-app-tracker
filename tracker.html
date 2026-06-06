@@ -497,7 +497,7 @@ function AppCard({ app, onUpdate, onRemove }) {
     : app.highlight
       ? `border-2 ${tc.hlBorder} ${tc.bg}`
       : app.group === "rejected"
-        ? "border-slate-200 bg-slate-50 opacity-70"
+        ? "border-slate-200 bg-slate-100 opacity-40 grayscale"
         : "border-slate-200 bg-white hover:shadow-sm hover:border-slate-300";
 
   return (
