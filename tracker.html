@@ -243,6 +243,7 @@ const SKILLS_BUILD0 = [
 const PHASES = [
   {
     id:1, label:"Phase 1", period:"May 2026 — Now", urgent:true,
+    timeline:{ start:"May 2026", end:"Jun 2026", duration:"2 months" },
     tracks:{
       1:{ summary:"IBM Assessments + Apply Now", tasks:[
         "Complete IBM FinOps assessment #115589 — URGENT",
@@ -267,6 +268,7 @@ const PHASES = [
   },
   {
     id:2, label:"Phase 2", period:"Summer 2026", urgent:false,
+    timeline:{ start:"Jun 2026", end:"Aug 2026", duration:"3 months" },
     tracks:{
       1:{ summary:"Excel at Citibank + Certs + Build", tasks:[
         "Excel at Citibank — attach to an AI/ML project",
@@ -292,6 +294,7 @@ const PHASES = [
   },
   {
     id:3, label:"Phase 3", period:"Fall 2026 — Most Important Season", urgent:true,
+    timeline:{ start:"Sep 2026", end:"Dec 2026", duration:"4 months" },
     tracks:{
       1:{ summary:"GOOGLE BOLD + Major Cloud Apps", tasks:[
         "🔴 Oct 1: Apply Google BOLD gTech/Sales — DAY ONE",
@@ -321,6 +324,7 @@ const PHASES = [
   },
   {
     id:4, label:"Phase 4", period:"2027 — Junior Year Internships", urgent:false,
+    timeline:{ start:"Jan 2027", end:"Dec 2027", duration:"12 months" },
     internalTransfer: true,
     tracks:{
       1:{ summary:"Google BOLD Intern → Return Offer",
@@ -355,6 +359,7 @@ const PHASES = [
   },
   {
     id:5, label:"Phase 5", period:"2028 — Graduation", urgent:false,
+    timeline:{ start:"Jan 2028", end:"Dec 2028", duration:"12 months" },
     tracks:{
       1:{ summary:"Core Google L3 → Begin Transfer Clock", tasks:[
         "Join Google full-time (BOLD → gTech new grad, L3 SWE)",
@@ -381,6 +386,7 @@ const PHASES = [
   },
   {
     id:6, label:"Phase 6", period:"2029–2031 — Senior IC", urgent:false,
+    timeline:{ start:"Jan 2029", end:"Dec 2031", duration:"3 years" },
     tracks:{
       1:{ summary:"Google Cloud CE → Sr. CE → FDE", tasks:[
         "Internal transfer to Google Cloud CE (1–2yr from hire date)",
@@ -406,6 +412,7 @@ const PHASES = [
   },
   {
     id:7, label:"Phase 7", period:"2031–2035 — Elite FDE Tier", urgent:false, convergence:true,
+    timeline:{ start:"Jan 2032", end:"2035+", duration:"3–4 years" },
     tracks:{
       1:{ summary:"Google Cloud FDE · OpenAI · Anthropic options", tasks:[
         "Google Cloud FDE (internal): $300k–460k TC",
@@ -830,6 +837,20 @@ function PhaseCard({ phase, checked, onToggle }) {
         </div>
         <span className={`text-xs ${isConvergence ? "text-amber-800" : "text-white/70"}`}>{phase.period}</span>
       </div>
+
+      {phase.timeline && (
+        <div className={`px-5 py-2 flex items-center gap-2 text-[11px] border-t ${
+          isConvergence ? "bg-amber-400/20 border-amber-400/30" : phase.urgent ? "bg-red-950/30 border-white/10" : "bg-slate-600/20 border-white/10"
+        }`}>
+          <span className={isConvergence ? "text-amber-900/60" : "text-white/50"}>Timeline</span>
+          <span className={isConvergence ? "text-amber-900/30" : "text-white/25"}>·</span>
+          <span className={`font-bold ${isConvergence ? "text-amber-900" : "text-white"}`}>{phase.timeline.start}</span>
+          <span className={isConvergence ? "text-amber-900/40" : "text-white/40"}>→</span>
+          <span className={`font-bold ${isConvergence ? "text-amber-900" : "text-white"}`}>{phase.timeline.end}</span>
+          <span className={isConvergence ? "text-amber-900/30" : "text-white/25"}>·</span>
+          <span className={isConvergence ? "text-amber-800/70" : "text-white/60"}>{phase.timeline.duration}</span>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white">
         {[1,2,3].map(tid => {
