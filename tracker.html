@@ -481,8 +481,9 @@ function StatusPill({ s }) {
   );
 }
 
-function AppCard({ app, onUpdate }) {
+function AppCard({ app, onUpdate, onRemove }) {
   const [open, setOpen] = useState(false);
+  const [confirmRemove, setConfirmRemove] = useState(false);
   const tc = T[app.track];
   const borderCls = app.pulse
     ? "border-orange-300 bg-orange-50 pulse-card"
@@ -526,10 +527,21 @@ function AppCard({ app, onUpdate }) {
           </select>
           <StatusPill s={app.status}/>
         </div>
-        <button onClick={() => setOpen(!open)}
-          className="text-[11px] text-slate-400 hover:text-slate-600">
-          {open ? "▲ hide" : "▼ notes"}
-        </button>
+        <div className="flex items-center gap-3">
+          {onRemove && (confirmRemove
+            ? <span className="flex items-center gap-2">
+                <button onClick={() => onRemove(app.id)} className="text-[11px] text-red-500 font-bold hover:text-red-700">confirm remove</button>
+                <button onClick={() => setConfirmRemove(false)} className="text-[11px] text-slate-400 hover:text-slate-600">cancel</button>
+              </span>
+            : <button onClick={() => setConfirmRemove(true)} className="text-[11px] text-red-300 hover:text-red-500">
+                ✕ remove
+              </button>
+          )}
+          <button onClick={() => setOpen(!open)}
+            className="text-[11px] text-slate-400 hover:text-slate-600">
+            {open ? "▲ hide" : "▼ notes"}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="mt-2.5">
@@ -568,7 +580,7 @@ function StatsBar({ apps }) {
   );
 }
 
-function GroupSection({ gk, apps, onUpdate }) {
+function GroupSection({ gk, apps, onUpdate, onRemove }) {
   const g = GROUPS.find(x => x.key === gk);
   const rows = apps.filter(a => a.group === gk).sort((a,b) => {
     const rank = { CRITICAL:0, HIGH:1, MEDIUM:2, "N/A":3 };
@@ -582,17 +594,132 @@ function GroupSection({ gk, apps, onUpdate }) {
         <span className="text-slate-400 font-normal text-xs">({rows.length})</span>
       </h2>
       <div className="flex flex-col gap-3">
-        {rows.map(a => <AppCard key={a.id} app={a} onUpdate={onUpdate}/>)}
+        {rows.map(a => <AppCard key={a.id} app={a} onUpdate={onUpdate} onRemove={onRemove}/>)}
       </div>
     </div>
   );
 }
 
-function TrackerTab({ apps, onUpdate }) {
+function AddEntryModal({ onClose, onAdd }) {
+  const PRIO_OPTS = ["CRITICAL","HIGH","MEDIUM","N/A"];
+  const [form, setForm] = useState({
+    company:"", role:"", jobId:"", track:1, group:"immediate",
+    status:"Not Started", deadline:"", pay:"", priority:"HIGH", fit:3, notes:"",
+  });
+  const set = (k,v) => setForm(prev => ({...prev,[k]:v}));
+  const valid = form.company.trim() && form.role.trim();
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50" onClick={e => { if(e.target===e.currentTarget) onClose(); }}>
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+        <div className="px-6 py-4 bg-gradient-to-r from-slate-800 to-slate-900 rounded-t-2xl flex items-center justify-between">
+          <span className="text-white font-black text-sm">Add Entry</span>
+          <button onClick={onClose} className="text-slate-400 hover:text-white text-xl leading-none">×</button>
+        </div>
+        <div className="p-6 space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-2">
+              <label className="text-xs font-bold text-slate-600 block mb-1">Company *</label>
+              <input value={form.company} onChange={e => set("company",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="e.g. Google"/>
+            </div>
+            <div className="col-span-2">
+              <label className="text-xs font-bold text-slate-600 block mb-1">Role *</label>
+              <input value={form.role} onChange={e => set("role",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="e.g. Software Engineer Intern — Summer 2027"/>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Track</label>
+              <select value={form.track} onChange={e => set("track",Number(e.target.value))}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                {[1,2,3].map(t => <option key={t} value={t}>{T[t].short} — {T[t].label}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Group</label>
+              <select value={form.group} onChange={e => set("group",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                {GROUPS.map(g => <option key={g.key} value={g.key}>{g.label}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Status</label>
+              <select value={form.status} onChange={e => set("status",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                {STATUS_OPTS.map(s => <option key={s}>{s}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Priority</label>
+              <select value={form.priority} onChange={e => set("priority",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                {PRIO_OPTS.map(p => <option key={p}>{p}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Deadline</label>
+              <input value={form.deadline} onChange={e => set("deadline",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="e.g. Open now — apply ASAP"/>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Pay</label>
+              <input value={form.pay} onChange={e => set("pay",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="e.g. $50–60/hr"/>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Job ID (optional)</label>
+              <input value={form.jobId} onChange={e => set("jobId",e.target.value)}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="e.g. 3116030"/>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 block mb-1">Fit (1–5)</label>
+              <select value={form.fit} onChange={e => set("fit",Number(e.target.value))}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                {[1,2,3,4,5].map(n => <option key={n} value={n}>{n}</option>)}
+              </select>
+            </div>
+            <div className="col-span-2">
+              <label className="text-xs font-bold text-slate-600 block mb-1">Notes</label>
+              <textarea value={form.notes} onChange={e => set("notes",e.target.value)} rows={3}
+                className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-300"
+                placeholder="Add context, links, requirements…"/>
+            </div>
+          </div>
+          <div className="flex gap-3 pt-2">
+            <button onClick={onClose}
+              className="flex-1 py-2 rounded-xl border border-slate-200 text-sm text-slate-600 hover:bg-slate-50 font-semibold">
+              Cancel
+            </button>
+            <button disabled={!valid}
+              onClick={() => { onAdd({...form, id:Date.now(), pulse:false, highlight:false}); onClose(); }}
+              className="flex-1 py-2 rounded-xl bg-slate-800 text-white text-sm font-black hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed">
+              Add Entry
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TrackerTab({ apps, onUpdate, onAdd, onRemove }) {
+  const [showAdd, setShowAdd] = useState(false);
   return (
     <div>
+      {showAdd && <AddEntryModal onClose={() => setShowAdd(false)} onAdd={onAdd}/>}
+      <div className="flex justify-end mb-4">
+        <button onClick={() => setShowAdd(true)}
+          className="px-4 py-2 bg-slate-800 text-white text-sm font-bold rounded-xl hover:bg-slate-700">
+          + Add Entry
+        </button>
+      </div>
       <StatsBar apps={apps}/>
-      {GROUPS.map(g => <GroupSection key={g.key} gk={g.key} apps={apps} onUpdate={onUpdate}/>)}
+      {GROUPS.map(g => <GroupSection key={g.key} gk={g.key} apps={apps} onUpdate={onUpdate} onRemove={onRemove}/>)}
     </div>
   );
 }
@@ -902,6 +1029,14 @@ function App() {
     setApps(prev => prev.map(a => a.id===id ? {...a,...patch} : a));
   }, []);
 
+  const onAdd = useCallback((entry) => {
+    setApps(prev => [...prev, entry]);
+  }, []);
+
+  const onRemove = useCallback((id) => {
+    setApps(prev => prev.filter(a => a.id !== id));
+  }, []);
+
   const onSkillChange = useCallback((id, pct) => {
     setSkills(prev => prev.map(s => s.id===id ? {...s, pct} : s));
   }, []);
@@ -931,7 +1066,7 @@ function App() {
 
       <div className="max-w-5xl mx-auto px-4 py-6">
         {tab === "tracker"
-          ? <TrackerTab apps={apps} onUpdate={onUpdate}/>
+          ? <TrackerTab apps={apps} onUpdate={onUpdate} onAdd={onAdd} onRemove={onRemove}/>
           : <RoadmapTab checked={checked} setChecked={setChecked} skills={skills} onSkillChange={onSkillChange}/>
         }
       </div>
