@@ -1047,7 +1047,13 @@ function App() {
   useEffect(() => { localStorage.setItem('tracker_skills', JSON.stringify(skills)); }, [skills]);
 
   const onUpdate = useCallback((id, patch) => {
-    setApps(prev => prev.map(a => a.id===id ? {...a,...patch} : a));
+    setApps(prev => prev.map(a => {
+      if (a.id !== id) return a;
+      const merged = { ...a, ...patch };
+      if (patch.status === "Rejected") merged.group = "rejected";
+      else if (patch.status === "Assessment") merged.group = "active";
+      return merged;
+    }));
   }, []);
 
   const onAdd = useCallback((entry) => {
