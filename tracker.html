@@ -10,7 +10,12 @@
   0%,100% { box-shadow: 0 0 0 0 rgba(234,88,12,0.5); }
   50%      { box-shadow: 0 0 0 8px rgba(234,88,12,0); }
 }
-.pulse-card { animation: pulseOrange 2s infinite; }
+.pulse-card  { animation: pulseOrange 2s infinite; }
+.pulse-green { animation: pulseGreen  2s infinite; }
+@keyframes pulseGreen {
+  0%,100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.5); }
+  50%      { box-shadow: 0 0 0 8px rgba(22,163,74,0); }
+}
 ::-webkit-scrollbar { width:5px; }
 ::-webkit-scrollbar-thumb { background:#94a3b8; border-radius:3px; }
 .tooltip-wrap { position:relative; display:inline-flex; }
@@ -29,21 +34,35 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <div id="root"></div>
 <script type="text/babel">
-const { useState, useCallback, useEffect } = React;
+const { useState, useCallback, useEffect, useRef } = React;
+
+function daysUntil(openDate, now) {
+  return Math.ceil((new Date(openDate) - (now || new Date())) / 86400000);
+}
+function isOpenNow(openDate, now) {
+  if (!openDate) return false;
+  return new Date(openDate) <= (now || new Date());
+}
 
 /* ═══════════════════════════════════════════════════════════
    TRACK CONFIG — 3 tracks
 ═══════════════════════════════════════════════════════════ */
 const T = {
-  1: { label:"CE/AI SE → Google Cloud",  short:"Track 1", accent:"#2563eb",
+  1: { label:"CE/AI SE → Google Cloud",        short:"Track 1", accent:"#2563eb",
        badge:"bg-blue-600 text-white",    text:"text-blue-700",
        border:"border-blue-200",          bg:"bg-blue-50",    hlBorder:"border-blue-400"   },
-  2: { label:"AI Consulting Bridge",      short:"Track 2", accent:"#7c3aed",
+  2: { label:"AI Consulting Bridge",            short:"Track 2", accent:"#7c3aed",
        badge:"bg-violet-600 text-white",  text:"text-violet-700",
        border:"border-violet-200",        bg:"bg-violet-50",  hlBorder:"border-violet-400" },
-  3: { label:"Frontier AI Labs",          short:"Track 3", accent:"#c2410c",
+  3: { label:"Frontier AI Labs",                short:"Track 3", accent:"#c2410c",
        badge:"bg-orange-700 text-white",  text:"text-orange-700",
        border:"border-orange-200",        bg:"bg-orange-50",  hlBorder:"border-orange-400" },
+  4: { label:"Big 4 Consulting",                short:"Track 4", accent:"#059669",
+       badge:"bg-emerald-600 text-white", text:"text-emerald-700",
+       border:"border-emerald-200",       bg:"bg-emerald-50", hlBorder:"border-emerald-400" },
+  5: { label:"Finance & Investment Banking",    short:"Track 5", accent:"#d97706",
+       badge:"bg-amber-600 text-white",   text:"text-amber-700",
+       border:"border-amber-200",         bg:"bg-amber-50",   hlBorder:"border-amber-400"  },
 };
 
 /* ═══════════════════════════════════════════════════════════
@@ -194,6 +213,140 @@ const APPS0 = [
     fit:5, priority:"MEDIUM", pulse:false, highlight:false,
     notes:"Earlier, more accessible entry into frontier AI labs than Anthropic/OpenAI. Dedicated FinTech vertical = exact specialization match. Good stepping stone to Anthropic/OpenAI FDE roles." },
 
+  /* ── BIG 4 CONSULTING ── */
+  { id:40, company:"McKinsey & Company", role:"Business Analyst Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026 — watch closely", pay:"$9k–12k/month",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"McKinsey BA internship — most competitive consulting role globally. Apply the day it opens. Case prep is essential. Citibank financial services background helps with finance/banking cases." },
+  { id:41, company:"Boston Consulting Group (BCG)", role:"Associate Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$8k–11k/month",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"BCG associate internship. Opens alongside McKinsey in early September. BCG Green Case is unique — practice separately. AI + FinTech knowledge is a real differentiator in case interviews." },
+  { id:42, company:"Bain & Company", role:"Associate Consultant Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$8k–11k/month",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"Bain ACI program. Known for private equity focus and strong culture fit assessment. Opens September alongside MBB peers." },
+  { id:43, company:"Deloitte S&O", role:"Strategy & Operations / AI Consulting Intern 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$35–45/hr",
+    fit:4, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Deloitte Strategy & Operations practice. Finance is Deloitte's biggest vertical — FinTech AI specialization path is natural. Opens earlier than MBB (August)." },
+  { id:44, company:"PwC Strategy&", role:"Strategy& Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 15, 2026", pay:"$35–45/hr",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-15",
+    notes:"PwC's elite strategy arm (formerly Booz & Co). Strong financial services practice. Less intensive case process than MBB — good backup." },
+  { id:45, company:"KPMG Advisory", role:"Management Consulting Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$32–42/hr",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"KPMG's advisory/consulting arm. Strong financial services and FinTech compliance practice. Big 4 audit background gives unique angle on regulatory AI." },
+  { id:46, company:"EY-Parthenon", role:"Strategy Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Oct 1, 2026", pay:"$32–42/hr",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-10-01",
+    notes:"EY's elite strategy consulting arm. Focus on private equity and growth strategy. Opens slightly later than MBB — good fallback if September rush is overwhelming." },
+  { id:47, company:"Oliver Wyman", role:"Business Analyst Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Sep 15, 2026", pay:"$8k–11k/month",
+    fit:4, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-15",
+    notes:"Oliver Wyman specializes in financial services consulting — ideal FinTech angle. Marsh McLennan subsidiary. Strong risk management and insurance practice. Higher fit than other T4 roles given finance focus." },
+  { id:48, company:"L.E.K. Consulting", role:"Associate Intern — Summer 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Oct 1, 2026", pay:"$7k–10k/month",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-10-01",
+    notes:"L.E.K. is strong in private equity due diligence and healthcare sectors. Good backup if MBB applications don't land. Opens early October." },
+  { id:49, company:"Accenture Strategy", role:"Strategy & Consulting Intern 2027",
+    track:4, group:"consulting4", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026 — rolling", pay:"$35–45/hr",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Accenture Strategy practice (distinct from general Accenture tech consulting). Rolling basis — apply early August. Broad practice areas including FinTech." },
+
+  /* ── FINANCE & INVESTMENT BANKING ── */
+  { id:50, company:"Goldman Sachs", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Jul 1, 2026 — monitor daily from July 1", pay:"$120k annualized · ~$10k/month",
+    fit:3, priority:"HIGH", pulse:false, highlight:true, openDate:"2026-07-01",
+    notes:"Goldman IB summer analyst — most prestigious IB program globally. Applications open early July and close FAST (often 1–2 weeks). Citibank background is a direct signal. Monitor Goldman careers page daily starting July 1 and apply within hours of opening." },
+  { id:51, company:"JPMorgan Chase", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Jul 7, 2026", pay:"$120k annualized",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-07-07",
+    notes:"JPMorgan IB SA program. Opens alongside Goldman in early July. Strong AI initiatives — Technology, Media & Telecom group is a strong fit given AI background." },
+  { id:52, company:"Morgan Stanley", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Jul 15, 2026", pay:"$120k annualized",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-07-15",
+    notes:"Morgan Stanley IB SA. Technology and financial sponsors groups are highly competitive. Opens mid-July." },
+  { id:53, company:"Bank of America", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$110k annualized",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"BofA Securities IB SA. Strong technology banking group. Global Financing & Markets rotational program is also worth considering." },
+  { id:54, company:"Citigroup", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$110k annualized",
+    fit:5, priority:"HIGH", pulse:false, highlight:true, openDate:"2026-08-01",
+    notes:"Highest Track 5 fit — 2x Citibank internship = direct internal network advantage. Reach out to Citi IB alumni via LinkedIn BEFORE the app opens. An internal referral could be the difference. Apply the day it opens." },
+  { id:55, company:"Barclays", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$105k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Barclays IB SA. Strong technology and media groups. Opens August alongside BofA and Citi." },
+  { id:56, company:"Deutsche Bank", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 15, 2026", pay:"$105k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-08-15",
+    notes:"Deutsche Bank IB SA. Technology banking group is a good fit. Opens mid-August." },
+  { id:57, company:"UBS", role:"Investment Banking Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 15, 2026", pay:"$105k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-08-15",
+    notes:"UBS IB SA. Wealth management and technology groups are strengths. Opens mid-August." },
+  { id:58, company:"BlackRock", role:"Technology & Innovation Analyst Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Jul 15, 2026", pay:"$110k annualized",
+    fit:5, priority:"HIGH", pulse:false, highlight:true, openDate:"2026-07-15",
+    notes:"BlackRock Technology group — AI + finance convergence is exactly BlackRock's core. The Aladdin platform is the world's largest investment management AI system. AI/ML background is a massive differentiator. Opens mid-July alongside Morgan Stanley." },
+  { id:59, company:"Blackstone", role:"Private Equity Summer Analyst 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$120k annualized",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Blackstone PE SA — very competitive. Note: Anthropic's $1.5B JV with Blackstone (May 2026) = direct connection between your Anthropic interest and Blackstone. Mention this in cover letter." },
+  { id:60, company:"KKR", role:"Private Equity / Finance Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$120k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"KKR PE summer analyst. Opens September. Very competitive — strong deal experience background needed. Apply after Goldman/JPMorgan are submitted." },
+  { id:61, company:"Citadel", role:"Software Engineer / Quantitative Research Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$150–200k annualized",
+    fit:3, priority:"HIGH", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Citadel quant/SWE intern — highest comp in finance. SWE role is more accessible than quant given CS background. Strong Python + algorithms required. Opens August." },
+  { id:62, company:"Point72", role:"Quantitative Analyst Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$125k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"Point72 quant intern (Steve Cohen's fund). Strong Python + data science background helps. Opens September." },
+  { id:63, company:"Jane Street", role:"Trading / Software Engineering Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Sep 1, 2026", pay:"$150k+ annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-01",
+    notes:"Jane Street trading/SWE intern. Very quantitative — strong probability, math, and algorithms required. Opens September." },
+  { id:64, company:"Bridgewater Associates", role:"Investment Logic / Technology Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Sep 15, 2026", pay:"$100k annualized",
+    fit:3, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-09-15",
+    notes:"Bridgewater — world's largest hedge fund. Unique culture and radical transparency fit assessment required. Technology role is a better fit than investment logic. Opens September." },
+  { id:65, company:"Fidelity Investments", role:"Technology / Quantitative Intern 2027",
+    track:5, group:"finance_ib", status:"Not Started",
+    deadline:"Opens ~Aug 1, 2026", pay:"$80k annualized",
+    fit:4, priority:"MEDIUM", pulse:false, highlight:false, openDate:"2026-08-01",
+    notes:"Fidelity technology + data science programs. Lower bar than bulge brackets but strong brand. AI/ML focus in asset management is growing rapidly. Good backup for Goldman/JPMorgan." },
+
   /* ── REJECTED ── */
   { id:23, company:"IBM", role:"Customer Success Engineer Co-op — Fall 2026",
     jobId:"96251", track:1, group:"rejected", status:"Rejected",
@@ -206,12 +359,14 @@ const APPS0 = [
    GROUPS
 ═══════════════════════════════════════════════════════════ */
 const GROUPS = [
-  { key:"active",     label:"🔴 Active Now — Assessments In Progress" },
-  { key:"immediate",  label:"⚡ Apply Immediately — Still Open" },
-  { key:"fall2026ce", label:"📅 Apply Fall 2026 — CE / AI SE + Consulting" },
-  { key:"fintech",    label:"💳 FinTech AI Companies to Target" },
-  { key:"frontier",   label:"🤖 Frontier AI Labs — Post-Graduation Targets" },
-  { key:"rejected",   label:"✗ Rejected — Learn & Move On" },
+  { key:"active",        label:"🔴 Active Now — Assessments In Progress" },
+  { key:"immediate",     label:"⚡ Apply Immediately — Still Open" },
+  { key:"fall2026ce",    label:"📅 Apply Fall 2026 — CE / AI SE + Consulting" },
+  { key:"fintech",       label:"💳 FinTech AI Companies to Target" },
+  { key:"frontier",      label:"🤖 Frontier AI Labs — Post-Graduation Targets" },
+  { key:"consulting4",   label:"🏛 Big 4 Consulting — Application Windows" },
+  { key:"finance_ib",    label:"💰 Finance & Investment Banking — Application Windows" },
+  { key:"rejected",      label:"✗ Rejected — Learn & Move On" },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -238,7 +393,7 @@ const SKILLS_BUILD0 = [
 ];
 
 /* ═══════════════════════════════════════════════════════════
-   ROADMAP PHASES — 3 tracks
+   ROADMAP PHASES — 5 tracks
 ═══════════════════════════════════════════════════════════ */
 const PHASES = [
   {
@@ -263,6 +418,19 @@ const PHASES = [
         "Study Anthropic + OpenAI enterprise product offerings",
         "Read Anthropic's 'Claude for Enterprise' announcements (May 2026 JV)",
         "Note: no undergrad intern programs at frontier labs — portfolio focus",
+      ]},
+      4:{ summary:"Case Prep + Set Application Calendars", tasks:[
+        "Set calendar: Deloitte Aug 1, McKinsey/BCG/Bain Sep 1",
+        "Order Case in Point book — start reading this month",
+        "Research MBB vs Big 4 consulting differences",
+        "Identify 2–3 UT Austin alumni at McKinsey / BCG / Oliver Wyman",
+      ]},
+      5:{ summary:"⚠️ Goldman Opens Jul 1 — Prep NOW", tasks:[
+        "⚠️ Goldman Sachs IB opens Jul 1 — 21 days from today",
+        "Update resume: quantify Citibank impact in $ terms",
+        "Draft Goldman + JPMorgan cover letters NOW (don't wait)",
+        "Connect with Citi IB alumni on LinkedIn before apps open",
+        "Monitor Goldman careers page daily starting July 1",
       ]},
     },
   },
@@ -289,6 +457,21 @@ const PHASES = [
         "Start building eval framework: test hallucination detection",
         "Update skills gap tracker as you learn — log progress",
         "Follow Anthropic + OpenAI enterprise hiring signals closely",
+      ]},
+      4:{ summary:"Intensive Case Prep + Consulting Network", tasks:[
+        "Complete 50+ mock cases before September app season",
+        "Use: CaseCoach, MConsulting Prep, or RocketBlocks",
+        "Attend McKinsey / BCG virtual recruiting events",
+        "Coffee chats with UT Austin consulting alumni",
+        "Research each firm's culture and interview style",
+      ]},
+      5:{ summary:"Apply Goldman/JPMorgan/BlackRock/MS (July)", tasks:[
+        "🔴 Jul 1: Apply Goldman Sachs IB — day one, within hours of opening",
+        "🔴 Jul 7: Apply JPMorgan Investment Banking SA",
+        "🔴 Jul 15: Apply Morgan Stanley IB + BlackRock Technology",
+        "Prep: HireVue video interview formats (Goldman, JPMorgan)",
+        "Study IB technicals: DCF, LBO basics, M&A process, comps",
+        "Leverage Citibank network for referrals if possible",
       ]},
     },
   },
@@ -319,6 +502,22 @@ const PHASES = [
         "Read Anthropic's Constitutional AI paper",
         "Start tracking Anthropic Applied AI Engineer job requirements",
         "Update skills gap tracker — note what requirements keep appearing",
+      ]},
+      4:{ summary:"All Consulting Apps Open — Aug through Oct", tasks:[
+        "🔴 Aug 1: Apply Deloitte S&O + Accenture Strategy",
+        "🔴 Sep 1: Apply McKinsey, BCG, Bain — all three same day",
+        "Sep 1: Apply KPMG Advisory",
+        "Sep 15: Apply Oliver Wyman + PwC Strategy&",
+        "Oct 1: Apply EY-Parthenon + L.E.K. Consulting",
+        "UT Austin career fair — consulting booths + alumni referrals",
+      ]},
+      5:{ summary:"All IB Apps — Aug through Sep", tasks:[
+        "🔴 Aug 1: Apply BofA, Citi, Barclays, Blackstone, Citadel, Fidelity",
+        "Aug 15: Apply Deutsche Bank + UBS",
+        "Sep 1: Apply KKR, Point72, Jane Street",
+        "Sep 15: Apply Bridgewater",
+        "Citigroup: reach out to internal network BEFORE applying",
+        "Prep: IB technicals deep dive + HireVue practice",
       ]},
     },
   },
@@ -355,6 +554,20 @@ const PHASES = [
         "Update skills gap tracker — aim for 30%+ on eval frameworks",
         "Prepare to discuss AI safety in future frontier lab interviews",
       ]},
+      4:{ summary:"Big 4 / MBB Consulting Intern", tasks:[
+        "Excel at McKinsey / BCG / Bain / Deloitte internship",
+        "Identify FinTech / financial services client engagements",
+        "Build relationships with senior consultants in FinTech practice",
+        "Aim for full-time return offer — performance is everything",
+        "Start building your FinTech AI consulting case study portfolio",
+      ]},
+      5:{ summary:"IB Summer Analyst → Return Offer", tasks:[
+        "Excel in IB summer analyst program (Goldman / JPMorgan / etc.)",
+        "Learn financial modeling: DCF, LBO, M&A deal process",
+        "Target: Technology or Financial Sponsors group",
+        "Build relationships with full-time analysts and associates",
+        "Secure full-time return offer (2-year analyst program)",
+      ]},
     },
   },
   {
@@ -382,6 +595,20 @@ const PHASES = [
         "Target application window: 2029–2030 after 2+ yrs client exp",
         "No frontier lab applications yet — real client deployment exp required",
       ]},
+      4:{ summary:"New Grad Consultant — FinTech Practice", tasks:[
+        "Join consulting firm full-time (analyst / associate level)",
+        "Target: FinTech or financial services practice group",
+        "Build 2 FinTech AI transformation case studies with real impact",
+        "Consider top MBA program (HBS / Wharton / Booth) in 3–5 years",
+        "TC: $85k–120k (Big 4) · $160k+ (MBB) new grad analyst",
+      ]},
+      5:{ summary:"IB Analyst 2-Year Program", tasks:[
+        "Full-time IB analyst — 2-year analyst program",
+        "Build: LBO modeling, M&A process, pitch books",
+        "Plan exit: PE, hedge fund, corp dev, or sponsor-backed startups",
+        "Start networking for buy-side exits 6 months into the role",
+        "TC: $170k–220k (base + year-end bonus, analyst yr 1–2)",
+      ]},
     },
   },
   {
@@ -408,10 +635,24 @@ const PHASES = [
         "2–3 yrs real client deployment exp = qualifying threshold met",
         "FinTech expertise = massive edge (banks need safety-first AI)",
       ]},
+      4:{ summary:"Senior Consultant → Engagement Manager", tasks:[
+        "Senior consultant / engagement manager level",
+        "Lead FinTech AI transformation projects end-to-end",
+        "Build proprietary AI tools that differentiate your client work",
+        "Consider MBA if targeting partner track (HBS / Wharton)",
+        "TC: $130k–200k (senior consultant / manager)",
+      ]},
+      5:{ summary:"Associate → Buy-Side Move", tasks:[
+        "IB associate (promoted from analyst or MBA associate hire)",
+        "Or: PE associate at top firm ($200k–400k TC)",
+        "Or: Hedge fund analyst — quant or fundamental ($200k–500k+)",
+        "Or: corporate development at high-growth tech / FinTech company",
+        "TC: $200k–500k depending on exit path",
+      ]},
     },
   },
   {
-    id:7, label:"Phase 7", period:"2031–2035 — Elite FDE Tier", urgent:false, convergence:true,
+    id:7, label:"Phase 7", period:"2031–2035 — Elite Tier", urgent:false, convergence:true,
     timeline:{ start:"Jan 2032", end:"2035+", duration:"3–4 years" },
     tracks:{
       1:{ summary:"Google Cloud FDE · OpenAI · Anthropic options", tasks:[
@@ -432,22 +673,36 @@ const PHASES = [
         "OpenAI FDE: $350k–550k TC",
         "Equal option alongside Google Cloud FDE",
         "FinTech expertise = massive differentiator (banks need safety-first AI)",
-        "All 3 tracks can lateral into frontier AI labs by this stage",
+        "All tracks can lateral into frontier AI labs by this stage",
+      ]},
+      4:{ summary:"Partner Track / FinTech Strategy Lead", tasks:[
+        "Principal / partner track at consulting firm",
+        "Or: VP Strategy at FinTech (Stripe, Plaid, Robinhood)",
+        "Or: lateral to corporate strategy at FAANG or frontier AI lab",
+        "FinTech AI expertise = premium in all paths at this level",
+        "TC: $250k–500k (consulting partner) · $300k–600k (FinTech exec)",
+      ]},
+      5:{ summary:"Director / MD · Senior Buy-Side", tasks:[
+        "IB Director / MD: $400k–800k+ TC",
+        "Or: PE Senior Associate / VP: $300k–700k TC",
+        "Or: Hedge Fund PM / Senior Analyst: $500k–2M+ TC",
+        "FinTech expertise = premium on all buy-side paths",
+        "All finance tracks converge at elite compensation tier",
       ]},
     },
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════
-   SALARY CHART DATA — 3 tracks
+   SALARY CHART DATA — 5 tracks
 ═══════════════════════════════════════════════════════════ */
 const SAL = [
-  { yr:"2026\nIntern",   t1:55,  t2:40,  t3:0,   l1:"~$50/hr",    l2:"~$40/hr",   l3:"N/A (no intern)" },
-  { yr:"2028\nNew Grad", t1:145, t2:95,  t3:0,   l1:"$130–160k",  l2:"$85–110k",  l3:"Not yet (2+ yrs needed)" },
-  { yr:"2029–31\nMid",   t1:220, t2:155, t3:275, l1:"$200–238k",  l2:"$130–180k", l3:"$200–350k" },
-  { yr:"2031+\nSenior",  t1:380, t2:265, t3:450, l1:"$300–460k",  l2:"$200–350k", l3:"$350–550k" },
+  { yr:"2026\nIntern",   t1:55,  t2:40,  t3:0,   t4:40,  t5:120, l1:"~$50/hr",   l2:"~$40/hr",  l3:"N/A",       l4:"~$40/hr",   l5:"$120k ann." },
+  { yr:"2028\nNew Grad", t1:145, t2:95,  t3:0,   t4:100, t5:200, l1:"$130–160k", l2:"$85–110k", l3:"Not yet",   l4:"$85–120k",  l5:"$170–220k"  },
+  { yr:"2029–31\nMid",   t1:220, t2:155, t3:275, t4:165, t5:350, l1:"$200–238k", l2:"$130–180k",l3:"$200–350k", l4:"$130–200k", l5:"$200–500k"  },
+  { yr:"2031+\nSenior",  t1:380, t2:265, t3:450, t4:375, t5:600, l1:"$300–460k", l2:"$200–350k",l3:"$350–550k", l4:"$250–500k", l5:"$400–800k+" },
 ];
-const SAL_MAX = 550;
+const SAL_MAX = 600;
 
 /* ═══════════════════════════════════════════════════════════
    COMPONENTS
@@ -513,6 +768,12 @@ function AppCard({ app, onUpdate, onRemove }) {
             {app.highlight && !app.pulse && (
               <span className={`text-[10px] font-black px-1.5 py-0.5 rounded ${tc.badge}`}>★ PRIORITY</span>
             )}
+            {app.openDate && (() => {
+              const d = daysUntil(app.openDate);
+              if (d <= 0) return <span className="text-[10px] font-black bg-green-500 text-white px-1.5 py-0.5 rounded animate-pulse">🟢 OPEN NOW</span>;
+              if (d <= 21) return <span className="text-[10px] font-black bg-amber-400 text-amber-900 px-1.5 py-0.5 rounded">⏱ {d}d</span>;
+              return <span className="text-[10px] font-mono text-slate-400 px-1.5 py-0.5 rounded border border-slate-200">opens {app.openDate}</span>;
+            })()}
           </div>
           <p className="text-slate-700 text-sm leading-snug">{app.role}</p>
           <p className="text-[11px] text-slate-400 mt-0.5">{app.deadline}</p>
@@ -641,7 +902,7 @@ function AddEntryModal({ onClose, onAdd }) {
               <label className="text-xs font-bold text-slate-600 block mb-1">Track</label>
               <select value={form.track} onChange={e => set("track",Number(e.target.value))}
                 className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
-                {[1,2,3].map(t => <option key={t} value={t}>{T[t].short} — {T[t].label}</option>)}
+                {Object.keys(T).map(Number).map(t => <option key={t} value={t}>{T[t].short} — {T[t].label}</option>)}
               </select>
             </div>
             <div>
@@ -714,6 +975,83 @@ function AddEntryModal({ onClose, onAdd }) {
   );
 }
 
+function LiveMonitor({ apps, onUpdate }) {
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(id);
+  }, []);
+
+  const watched = apps.filter(a => a.openDate && a.group !== 'rejected' && a.status !== 'Applied');
+  if (!watched.length) return null;
+
+  const openNow   = watched.filter(a => isOpenNow(a.openDate, now))
+                           .sort((a,b) => new Date(b.openDate) - new Date(a.openDate));
+  const upcoming  = watched.filter(a => !isOpenNow(a.openDate, now))
+                           .sort((a,b) => new Date(a.openDate) - new Date(b.openDate));
+  const next      = upcoming[0];
+  const nextDays  = next ? daysUntil(next.openDate, now) : null;
+
+  return (
+    <div className="mb-6 rounded-2xl overflow-hidden border border-slate-700 shadow-md">
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 px-5 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div className="flex items-center gap-2.5">
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0"/>
+          <span className="text-white font-black text-sm">Live Application Monitor</span>
+          <span className="text-slate-500 text-[10px] font-mono hidden sm:inline">· refreshes every 60s</span>
+        </div>
+        <div className="flex items-center gap-3 text-xs flex-wrap">
+          {openNow.length > 0 && <span className="text-green-400 font-black">{openNow.length} open now</span>}
+          {upcoming.length > 0 && <span className="text-slate-400">{upcoming.length} upcoming</span>}
+          {next && <span className="text-amber-400 font-semibold">next: {next.company} in {nextDays}d</span>}
+        </div>
+      </div>
+
+      {openNow.length > 0 && (
+        <div className="bg-green-950/40 border-t border-green-900/40 px-5 py-3">
+          <div className="text-[10px] font-black text-green-400 uppercase tracking-wider mb-2.5">Applications Now Open</div>
+          <div className="flex flex-col gap-2">
+            {openNow.map(a => (
+              <div key={a.id} className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shrink-0"/>
+                  <span className="text-green-300 font-black text-xs shrink-0">{a.company}</span>
+                  <span className="text-green-600 text-[11px] truncate hidden sm:inline">{a.role}</span>
+                </div>
+                <button onClick={() => onUpdate(a.id, { group:'immediate', deadline:'🟢 OPEN NOW — Apply immediately!' })}
+                  className="text-[10px] bg-green-600 text-white px-2.5 py-1 rounded-lg font-bold hover:bg-green-500 shrink-0 whitespace-nowrap">
+                  → Move to Apply Now
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {upcoming.length > 0 && (
+        <div className="bg-slate-800/40 border-t border-slate-700/40 px-5 py-3">
+          <div className="text-[10px] font-black text-slate-400 uppercase tracking-wider mb-2.5">Upcoming Openings</div>
+          <div className="flex gap-2.5 overflow-x-auto pb-1">
+            {upcoming.slice(0, 8).map(a => {
+              const d = daysUntil(a.openDate, now);
+              const tc = T[a.track];
+              const urgent = d <= 14;
+              return (
+                <div key={a.id} className={`flex-shrink-0 rounded-xl px-3 py-2 min-w-[130px] border ${urgent ? 'bg-amber-900/30 border-amber-700/40' : 'bg-slate-700/40 border-slate-600/30'}`}>
+                  <div className="text-[9px] font-black mb-0.5" style={{color: tc.accent}}>{tc.short}</div>
+                  <div className="text-white text-[11px] font-bold leading-tight">{a.company}</div>
+                  <div className={`text-[10px] mt-1 font-semibold ${urgent ? 'text-amber-400' : 'text-slate-400'}`}>{d}d · {a.openDate}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function TrackerTab({ apps, onUpdate, onAdd, onRemove }) {
   const [showAdd, setShowAdd] = useState(false);
   return (
@@ -725,6 +1063,7 @@ function TrackerTab({ apps, onUpdate, onAdd, onRemove }) {
           + Add Entry
         </button>
       </div>
+      <LiveMonitor apps={apps} onUpdate={onUpdate}/>
       <StatsBar apps={apps}/>
       {GROUPS.map(g => <GroupSection key={g.key} gk={g.key} apps={apps} onUpdate={onUpdate} onRemove={onRemove}/>)}
     </div>
@@ -816,6 +1155,54 @@ function GTransferTooltip() {
   );
 }
 
+/* ── ROADMAP: Track Column (shared by PhaseCard rows) ── */
+function TrackCol({ tid, phase, checked, onToggle }) {
+  const tc = T[tid];
+  const td = phase.tracks[tid];
+  if (!td) return null;
+  return (
+    <div className="p-4">
+      <div className={`flex items-center gap-2 mb-3 pb-2 border-b ${tc.border}`}>
+        <span className="w-2 h-2 rounded-full shrink-0" style={{ background:tc.accent }}/>
+        <span className={`text-xs font-black ${tc.text} shrink-0`}>{tc.short}</span>
+        <span className="text-[11px] text-slate-400 truncate">{td.summary}</span>
+      </div>
+      {phase.internalTransfer && tid===1 && td.milestone && (
+        <div className={`mb-3 p-3 rounded-lg border-2 ${tc.hlBorder} ${tc.bg}`}>
+          <div className="flex items-center flex-wrap gap-1 mb-1.5">
+            <span className="text-xs font-black text-blue-700">{td.milestone.label}</span>
+            <GTransferTooltip/>
+          </div>
+          <p className="text-[11px] text-slate-600 leading-relaxed">{td.milestone.detail}</p>
+        </div>
+      )}
+      <ul className="space-y-2">
+        {td.tasks.map((task, i) => {
+          const key = `${phase.id}-${tid}-${i}`;
+          const done = !!checked[key];
+          const red  = task.startsWith("🔴");
+          const warn = task.startsWith("⚠️");
+          return (
+            <li key={i} className="flex items-start gap-2 group">
+              <button onClick={() => onToggle(key)}
+                className={`mt-0.5 w-4 h-4 rounded border-2 flex items-center justify-center shrink-0 transition-colors ${
+                  done ? "bg-emerald-500 border-emerald-500"
+                       : red||warn ? "border-red-400" : "border-slate-300 group-hover:border-blue-400"
+                }`}>
+                {done && <span className="text-white text-[9px] font-black">✓</span>}
+              </button>
+              <span className={`text-xs leading-relaxed ${
+                done ? "line-through text-slate-400"
+                     : red||warn ? "text-red-700 font-bold" : "text-slate-700"
+              }`}>{task}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 /* ── ROADMAP: Phase Card ── */
 function PhaseCard({ phase, checked, onToggle }) {
   const isConvergence = phase.convergence;
@@ -833,7 +1220,7 @@ function PhaseCard({ phase, checked, onToggle }) {
           {isConvergence && <span className="text-xl">⭐</span>}
           <span className={`font-black text-sm ${isConvergence ? "text-amber-900" : "text-white"}`}>{phase.label}</span>
           {phase.urgent && <span className="text-[10px] bg-white/20 text-white px-2 py-0.5 rounded-full font-semibold">URGENT</span>}
-          {isConvergence && <span className="text-[10px] bg-amber-900/20 text-amber-900 px-2 py-0.5 rounded-full font-bold">ELITE FDE TIER — PICK YOUR COMPANY</span>}
+          {isConvergence && <span className="text-[10px] bg-amber-900/20 text-amber-900 px-2 py-0.5 rounded-full font-bold">ELITE TIER — ALL 5 TRACKS CONVERGE</span>}
         </div>
         <span className={`text-xs ${isConvergence ? "text-amber-800" : "text-white/70"}`}>{phase.period}</span>
       </div>
@@ -852,68 +1239,30 @@ function PhaseCard({ phase, checked, onToggle }) {
         </div>
       )}
 
+      {/* Row 1: Tracks 1–3 */}
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white">
-        {[1,2,3].map(tid => {
-          const tc = T[tid];
-          const td = phase.tracks[tid];
-          if (!td) return null;
-          return (
-            <div key={tid} className="p-4">
-              <div className={`flex items-center gap-2 mb-3 pb-2 border-b ${tc.border}`}>
-                <span className="w-2 h-2 rounded-full shrink-0" style={{ background:tc.accent }}/>
-                <span className={`text-xs font-black ${tc.text} shrink-0`}>{tc.short}</span>
-                <span className="text-[11px] text-slate-400 truncate">{td.summary}</span>
-              </div>
-
-              {phase.internalTransfer && tid===1 && td.milestone && (
-                <div className={`mb-3 p-3 rounded-lg border-2 ${tc.hlBorder} ${tc.bg}`}>
-                  <div className="flex items-center flex-wrap gap-1 mb-1.5">
-                    <span className="text-xs font-black text-blue-700">{td.milestone.label}</span>
-                    <GTransferTooltip/>
-                  </div>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">{td.milestone.detail}</p>
-                </div>
-              )}
-
-              <ul className="space-y-2">
-                {td.tasks.map((task, i) => {
-                  const key = `${phase.id}-${tid}-${i}`;
-                  const done = !!checked[key];
-                  const red  = task.startsWith("🔴");
-                  return (
-                    <li key={i} className="flex items-start gap-2 group">
-                      <button onClick={() => onToggle(key)}
-                        className={`mt-0.5 w-4 h-4 rounded border-2 flex items-center justify-center shrink-0 transition-colors ${
-                          done ? "bg-emerald-500 border-emerald-500"
-                               : red ? "border-red-400" : "border-slate-300 group-hover:border-blue-400"
-                        }`}>
-                        {done && <span className="text-white text-[9px] font-black">✓</span>}
-                      </button>
-                      <span className={`text-xs leading-relaxed ${
-                        done ? "line-through text-slate-400"
-                             : red ? "text-red-700 font-bold" : "text-slate-700"
-                      }`}>{task}</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          );
-        })}
+        {[1,2,3].map(tid => <TrackCol key={tid} tid={tid} phase={phase} checked={checked} onToggle={onToggle}/>)}
       </div>
+
+      {/* Row 2: Tracks 4–5 */}
+      {(phase.tracks[4] || phase.tracks[5]) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-100 bg-white border-t-2 border-slate-100">
+          {[4,5].map(tid => <TrackCol key={tid} tid={tid} phase={phase} checked={checked} onToggle={onToggle}/>)}
+        </div>
+      )}
     </div>
   );
 }
 
 /* ── SALARY CHART ── */
 function SalaryChart() {
-  const cols  = { t1:"#2563eb", t2:"#7c3aed", t3:"#c2410c" };
-  const names = { t1:"Track 1 (CE → Google Cloud)", t2:"Track 2 (Consulting)", t3:"Track 3 (Frontier AI Labs)" };
-  const keys  = ["t1","t2","t3"];
+  const cols  = { t1:"#2563eb", t2:"#7c3aed", t3:"#c2410c", t4:"#059669", t5:"#d97706" };
+  const names = { t1:"Track 1 (CE → Google Cloud)", t2:"Track 2 (AI Consulting)", t3:"Track 3 (Frontier AI Labs)", t4:"Track 4 (Big 4 Consulting)", t5:"Track 5 (Finance & IB)" };
+  const keys  = ["t1","t2","t3","t4","t5"];
   return (
     <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm mt-5">
-      <h3 className="text-sm font-bold text-slate-800 mb-1">Total Compensation Trajectory — All 3 Tracks</h3>
-      <p className="text-xs text-slate-500 mb-4">Estimated TC. Track 3 activates in 2029 (requires 2+ yrs client exp). All tracks reach $200k–$550k+ by 2031+.</p>
+      <h3 className="text-sm font-bold text-slate-800 mb-1">Total Compensation Trajectory — All 5 Tracks</h3>
+      <p className="text-xs text-slate-500 mb-4">Estimated TC. Track 3 activates in 2029 (requires 2+ yrs exp). Track 5 (IB) has the highest intern pay and senior ceiling. All tracks reach $200k+ by 2031+.</p>
       <div className="flex flex-wrap gap-4 mb-5">
         {keys.map(k => (
           <div key={k} className="flex items-center gap-1.5 text-xs text-slate-600">
@@ -969,7 +1318,7 @@ function RoadmapTab({ checked, setChecked, skills, onSkillChange }) {
         <div className="flex items-center justify-between mb-3">
           <div>
             <h2 className="text-sm font-bold text-slate-800">Career Roadmap Progress</h2>
-            <p className="text-xs text-slate-500 mt-0.5">7 phases · 3 parallel tracks · Google Core → Cloud transfer · Frontier AI labs path</p>
+            <p className="text-xs text-slate-500 mt-0.5">7 phases · 5 parallel tracks · Google Cloud, Consulting, Frontier AI, Big 4, Finance & IB</p>
           </div>
           <div className="text-right">
             <div className="text-3xl font-black text-slate-800">{pct}%</div>
@@ -983,7 +1332,7 @@ function RoadmapTab({ checked, setChecked, skills, onSkillChange }) {
       </div>
 
       <div className="flex flex-wrap gap-3 mb-5">
-        {[1,2,3].map(tid => {
+        {Object.keys(T).map(Number).map(tid => {
           const tc = T[tid];
           return (
             <div key={tid} className={`flex items-center gap-2 px-3 py-2 rounded-xl border ${tc.border} ${tc.bg}`}>
@@ -1045,6 +1394,38 @@ function App() {
   useEffect(() => { localStorage.setItem('tracker_apps', JSON.stringify(apps)); }, [apps]);
   useEffect(() => { localStorage.setItem('tracker_checked', JSON.stringify(checked)); }, [checked]);
   useEffect(() => { localStorage.setItem('tracker_skills', JSON.stringify(skills)); }, [skills]);
+
+  useEffect(() => {
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+    const checkOpenings = () => {
+      const now = new Date();
+      const notified = JSON.parse(localStorage.getItem('notified_apps') || '[]');
+      setApps(prev => {
+        const newlyOpen = prev.filter(a =>
+          a.openDate &&
+          new Date(a.openDate) <= now &&
+          !notified.includes(a.id) &&
+          !['active', 'rejected', 'immediate'].includes(a.group)
+        );
+        if (!newlyOpen.length) return prev;
+        newlyOpen.forEach(a => {
+          if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification(`🟢 ${a.company} — Applications Now Open!`, {
+              body: a.role,
+              tag: `app-open-${a.id}`,
+            });
+          }
+        });
+        localStorage.setItem('notified_apps', JSON.stringify([...notified, ...newlyOpen.map(a => a.id)]));
+        return prev;
+      });
+    };
+    checkOpenings();
+    const id = setInterval(checkOpenings, 60000);
+    return () => clearInterval(id);
+  }, []);
 
   const onUpdate = useCallback((id, patch) => {
     setApps(prev => prev.map(a => {
