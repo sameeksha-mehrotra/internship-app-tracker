@@ -1,0 +1,46 @@
+name: Job Monitor
+
+on:
+  schedule:
+    # 9:00 AM Central Time daily (14:00 UTC; adjusts for CDT/CST automatically)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    # Allows you to trigger a manual run from the GitHub Actions tab anytime
+
+permissions:
+  contents: write  # to commit updated state.json back to the repo
+  issues: write    # to open alert issues (which GitHub emails you about)
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: monitor/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r monitor/requirements.txt
+
+      - name: Run job monitor
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python monitor/check_jobs.py
+
+      - name: Commit updated state.json
+        run: |
+          git config user.name  "job-monitor[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitor/state.json
+          # Only commit if state actually changed
+          git diff --staged --quiet || git commit -m "chore: update job monitor state [skip ci]"
+          git push
