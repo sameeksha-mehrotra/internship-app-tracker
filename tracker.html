@@ -1407,7 +1407,7 @@ function App() {
           a.openDate &&
           new Date(a.openDate) <= now &&
           !notified.includes(a.id) &&
-          !['active', 'rejected', 'immediate'].includes(a.group)
+          ['consulting4', 'finance_ib'].includes(a.group)
         );
         if (!newlyOpen.length) return prev;
         newlyOpen.forEach(a => {
@@ -1419,7 +1419,12 @@ function App() {
           }
         });
         localStorage.setItem('notified_apps', JSON.stringify([...notified, ...newlyOpen.map(a => a.id)]));
-        return prev;
+        return prev.map(a => {
+          if (newlyOpen.find(x => x.id === a.id)) {
+            return { ...a, group: 'immediate', deadline: '🟢 OPEN NOW — Apply immediately!' };
+          }
+          return a;
+        });
       });
     };
     checkOpenings();
