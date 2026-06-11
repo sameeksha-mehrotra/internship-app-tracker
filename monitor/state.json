@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-11T03:57:53.549288+00:00",
+  "last_run": "2026-06-11T17:35:00.240733+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "5a25d12b5eec63d4af32569869423463aba6da9d89dc2f0172160d958a993a36"
+      "hash": "3f4f87c895237ed0b9a6d82e39128a4d56e7651c4bc8d30c7451b310d7401d11"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -19,7 +19,7 @@
     },
     "PwC Strategy&": {
       "seen_ids": [],
-      "hash": "6567de5a5387e63ff60a0ee0ffe1efc64d1234cb4bfbfe627d34e9c49ffe2c50"
+      "hash": "adba8af709f6c2b25ca5895b6294a4c9ca6bc3d94b2ca447fa3a2652529f03a6"
     },
     "KPMG Advisory": {
       "seen_ids": [],
@@ -27,7 +27,7 @@
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "46fc746891d881a41a1a0ba0c01e6aeba33d912e25969f4d8f0417aec6552a39"
+      "hash": "42341481959f9fd151d690c472cf5e1c92857ec45ed33bba62d7fe077aa1f97d"
     },
     "Oliver Wyman": {
       "seen_ids": [],
@@ -39,7 +39,7 @@
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "3dadd9bf1ee917b0064b8ad984402083c3e7a2b2951d2588556d382870bb092a"
+      "hash": "735d02f692400ef7894fe7584cbb04336403442126df195453f4b0631f550451"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -59,21 +59,21 @@
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
         "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
         "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
-        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
         "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
-        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
         "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949"
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "15160b8211974229428b2a3f4a666d79e2d0ddeb88f951bee7117f84e3acb63a"
+      "hash": "4fad94a099e731a0881e6cf6d247971a9efd0b2d5a24b4c2f6d532e5c3264fc6"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -117,7 +117,7 @@
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "346bb3bb71753a8c20f3abfe3a0d63786ee68799c237bfa2675ffe1405c4533a"
+      "hash": "b8869dcba28803dd328b80227418adf52f75660d41b1c64099f0b09f3cbe3ec9"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -125,12 +125,12 @@
     },
     "Databricks": {
       "seen_ids": [
-        "8012658002",
-        "6544386002",
-        "7011263002",
-        "5646866002",
         "8012818002",
-        "8459026002"
+        "6544386002",
+        "8459026002",
+        "8012658002",
+        "5646866002",
+        "7011263002"
       ],
       "hash": null
     },
@@ -140,7 +140,7 @@
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "885e9f28a3b2b0e82bb238ce0877a2662bd8445377e7a2beab5145335bdf9ad2"
+      "hash": "56bc08dcfdf394c2e4636b587c235469c77f9c6d3bec69d190e54eabfecf4284"
     }
   }
 }
