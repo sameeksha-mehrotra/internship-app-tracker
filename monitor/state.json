@@ -1,4 +1,146 @@
 {
-  "last_run": null,
-  "companies": {}
+  "last_run": "2026-06-11T03:57:53.549288+00:00",
+  "companies": {
+    "McKinsey & Company": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "BCG": {
+      "seen_ids": [],
+      "hash": "5a25d12b5eec63d4af32569869423463aba6da9d89dc2f0172160d958a993a36"
+    },
+    "Bain & Company": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Deloitte": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "PwC Strategy&": {
+      "seen_ids": [],
+      "hash": "6567de5a5387e63ff60a0ee0ffe1efc64d1234cb4bfbfe627d34e9c49ffe2c50"
+    },
+    "KPMG Advisory": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "EY-Parthenon": {
+      "seen_ids": [],
+      "hash": "46fc746891d881a41a1a0ba0c01e6aeba33d912e25969f4d8f0417aec6552a39"
+    },
+    "Oliver Wyman": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "LEK Consulting": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Accenture Strategy": {
+      "seen_ids": [],
+      "hash": "3dadd9bf1ee917b0064b8ad984402083c3e7a2b2951d2588556d382870bb092a"
+    },
+    "Goldman Sachs": {
+      "seen_ids": [],
+      "hash": "d613d22a5ac131df2eb52e69c0c89ba711b4d0f1e7dcb89416f5a939b2b33cee"
+    },
+    "JPMorgan": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Morgan Stanley": {
+      "seen_ids": [],
+      "hash": "db7331f9173542ea5f03ac33dbda5d0fe8db70235f76d7a207edcffa60978b01"
+    },
+    "Bank of America": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Citigroup": {
+      "seen_ids": [
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949"
+      ],
+      "hash": null
+    },
+    "Barclays": {
+      "seen_ids": [],
+      "hash": "15160b8211974229428b2a3f4a666d79e2d0ddeb88f951bee7117f84e3acb63a"
+    },
+    "Deutsche Bank": {
+      "seen_ids": [],
+      "hash": "3c15d55dcd1f54dc0a8edc2d79d3df8f7e2da5ea6b697b540cb7c954c83ec7ef"
+    },
+    "UBS": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "BlackRock": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Blackstone": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "KKR": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Citadel": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Point72": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Jane Street": {
+      "seen_ids": [],
+      "hash": "bdb1dd7f96981c56c3b77cd7fb235b770eb2016b5ae3ffd5ecfe045ac9976108"
+    },
+    "Bridgewater": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Fidelity": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Google (BOLD / gTech)": {
+      "seen_ids": [],
+      "hash": "346bb3bb71753a8c20f3abfe3a0d63786ee68799c237bfa2675ffe1405c4533a"
+    },
+    "Salesforce": {
+      "seen_ids": [],
+      "hash": "3fe2f2253a961883989583c390d8c0698a3c426575e14f642261bbf9bc026433"
+    },
+    "Databricks": {
+      "seen_ids": [
+        "8012658002",
+        "6544386002",
+        "7011263002",
+        "5646866002",
+        "8012818002",
+        "8459026002"
+      ],
+      "hash": null
+    },
+    "Cohere": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "AWS (Amazon)": {
+      "seen_ids": [],
+      "hash": "885e9f28a3b2b0e82bb238ce0877a2662bd8445377e7a2beab5145335bdf9ad2"
+    }
+  }
 }
