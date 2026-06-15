@@ -75,11 +75,11 @@ COMPANIES = [
     },
     {
         "name": "Oliver Wyman", "track": 4, "method": "page_hash",
-        "url": "https://www.oliverwyman.com/careers/find-a-job.html",
+        "url": "https://www.oliverwyman.com/careers/entry-level.html",
     },
     {
         "name": "LEK Consulting", "track": 4, "method": "page_hash",
-        "url": "https://www.lek.com/join-lek/open-positions",
+        "url": "https://www.lek.com/join-lek/apply/internships",
     },
     {
         "name": "Accenture Strategy", "track": 4, "method": "page_hash",
@@ -125,7 +125,7 @@ COMPANIES = [
     },
     {
         "name": "Blackstone", "track": 5, "method": "page_hash",
-        "url": "https://www.blackstone.com/careers/open-positions/",
+        "url": "https://www.blackstone.com/careers/students/",
     },
     {
         "name": "KKR", "track": 5, "method": "page_hash",
@@ -137,7 +137,7 @@ COMPANIES = [
     },
     {
         "name": "Point72", "track": 5, "method": "page_hash",
-        "url": "https://point72.com/open-positions/",
+        "url": "https://careers.point72.com/?experience=Early+Career%3BInternships",
     },
     {
         "name": "Jane Street", "track": 5, "method": "page_hash",
@@ -145,11 +145,11 @@ COMPANIES = [
     },
     {
         "name": "Bridgewater", "track": 5, "method": "page_hash",
-        "url": "https://www.bridgewater.com/careers/open-positions",
+        "url": "https://www.bridgewater.com/working-at-bridgewater/students",
     },
     {
         "name": "Fidelity", "track": 5, "method": "page_hash",
-        "url": "https://jobs.fidelity.com/job-search/?keyword=intern",
+        "url": "https://jobs.fidelity.com/en/students/internships/",
     },
 
     # ── TRACK 1: CE / AI SE (key fall openers) ───────────────────────────
