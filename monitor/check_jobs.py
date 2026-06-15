@@ -20,8 +20,9 @@ from pathlib import Path
 
 import requests
 
-SCRIPT_DIR = Path(__file__).parent
-STATE_FILE  = SCRIPT_DIR / "state.json"
+SCRIPT_DIR    = Path(__file__).parent
+STATE_FILE    = SCRIPT_DIR / "state.json"
+FINDINGS_FILE = SCRIPT_DIR / "new_findings.json"
 
 KEYWORDS = [
     "intern", "internship", "summer analyst", "summer associate",
@@ -378,6 +379,32 @@ def main():
 
     state["last_run"] = now
     save_state(state)
+
+    # ── Write API findings to new_findings.json ────────────────────────
+    try:
+        findings_data = json.loads(FINDINGS_FILE.read_text()) if FINDINGS_FILE.exists() else {"last_updated": None, "findings": []}
+    except Exception:
+        findings_data = {"last_updated": None, "findings": []}
+
+    existing_ids = {f["id"] for f in findings_data.get("findings", [])}
+    for a in alerts:
+        for j in a.get("jobs", []):
+            fid = f"{a['company']}::{j['id']}"
+            if fid not in existing_ids:
+                findings_data["findings"].append({
+                    "id": fid,
+                    "company": a["company"],
+                    "role": j["title"],
+                    "track": a["track"],
+                    "url": j.get("url", ""),
+                    "location": j.get("location", ""),
+                    "detected": now,
+                    "source": a["method"],
+                })
+                existing_ids.add(fid)
+
+    findings_data["last_updated"] = now
+    FINDINGS_FILE.write_text(json.dumps(findings_data, indent=2))
 
     print(f"\n{'─'*60}")
     if not alerts:
