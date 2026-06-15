@@ -54,11 +54,11 @@ COMPANIES = [
     },
     {
         "name": "Bain & Company", "track": 4, "method": "page_hash",
-        "url": "https://www.bain.com/careers/find-a-role/",
+        "url": "https://www.bain.com/careers/find-a-role/?type=Internship",
     },
     {
         "name": "Deloitte", "track": 4, "method": "page_hash",
-        "url": "https://jobs2.deloitte.com/us/en/search-results?keywords=intern&category=Consulting",
+        "url": "https://apply.deloitte.com/careers/SearchJobs/intern",
     },
     {
         "name": "PwC Strategy&", "track": 4, "method": "page_hash",
@@ -66,19 +66,19 @@ COMPANIES = [
     },
     {
         "name": "KPMG Advisory", "track": 4, "method": "page_hash",
-        "url": "https://www.kpmgcareers.com/internships/",
+        "url": "https://www.kpmg.com/us/en/careers/students-and-recent-grads/internships.html",
     },
     {
         "name": "EY-Parthenon", "track": 4, "method": "page_hash",
         "url": "https://careers.ey.com/ey/search/#/?query=intern",
     },
     {
-        "name": "Oliver Wyman", "track": 4, "method": "greenhouse",
-        "slug": "oliverwyman",
+        "name": "Oliver Wyman", "track": 4, "method": "page_hash",
+        "url": "https://www.oliverwyman.com/careers/find-a-job.html",
     },
     {
-        "name": "LEK Consulting", "track": 4, "method": "greenhouse",
-        "slug": "lekandcompany",
+        "name": "LEK Consulting", "track": 4, "method": "page_hash",
+        "url": "https://www.lek.com/join-lek/open-positions",
     },
     {
         "name": "Accenture Strategy", "track": 4, "method": "page_hash",
@@ -91,8 +91,8 @@ COMPANIES = [
         "url": "https://higher.gs.com/roles",
     },
     {
-        "name": "JPMorgan", "track": 5, "method": "workday",
-        "tenant": "jpmorgan", "host": "jpmorgan.wd1.myworkdayjobs.com", "site": "JPMorgan",
+        "name": "JPMorgan", "track": 5, "method": "page_hash",
+        "url": "https://jpmorgan.wd1.myworkdayjobs.com/JPMorgan",
     },
     {
         "name": "Morgan Stanley", "track": 5, "method": "page_hash",
@@ -115,40 +115,40 @@ COMPANIES = [
         "url": "https://careers.db.com/professionals/search-roles/#/internship/United%20States",
     },
     {
-        "name": "UBS", "track": 5, "method": "workday",
-        "tenant": "ubs", "host": "ubs.wd3.myworkdayjobs.com", "site": "UBS_Global",
+        "name": "UBS", "track": 5, "method": "page_hash",
+        "url": "https://ubs.wd3.myworkdayjobs.com/UBS_Global",
     },
     {
-        "name": "BlackRock", "track": 5, "method": "workday",
-        "tenant": "blackrock", "host": "blackrock.wd1.myworkdayjobs.com", "site": "BlackRock_Global",
+        "name": "BlackRock", "track": 5, "method": "page_hash",
+        "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Global",
     },
     {
-        "name": "Blackstone", "track": 5, "method": "greenhouse",
-        "slug": "blackstone",
+        "name": "Blackstone", "track": 5, "method": "page_hash",
+        "url": "https://www.blackstone.com/careers/open-positions/",
     },
     {
-        "name": "KKR", "track": 5, "method": "greenhouse",
-        "slug": "kkr",
+        "name": "KKR", "track": 5, "method": "page_hash",
+        "url": "https://www.kkr.com/careers",
     },
     {
         "name": "Citadel", "track": 5, "method": "page_hash",
         "url": "https://www.citadel.com/careers/open-positions/",
     },
     {
-        "name": "Point72", "track": 5, "method": "lever",
-        "slug": "point72",
+        "name": "Point72", "track": 5, "method": "page_hash",
+        "url": "https://point72.com/open-positions/",
     },
     {
         "name": "Jane Street", "track": 5, "method": "page_hash",
         "url": "https://www.janestreet.com/join-jane-street/open-roles/",
     },
     {
-        "name": "Bridgewater", "track": 5, "method": "greenhouse",
-        "slug": "bridgewater",
+        "name": "Bridgewater", "track": 5, "method": "page_hash",
+        "url": "https://www.bridgewater.com/careers/open-positions",
     },
     {
         "name": "Fidelity", "track": 5, "method": "page_hash",
-        "url": "https://jobs.fidelity.com/job-search/?keyword=intern&category=Students%20and%20Entry%20Level",
+        "url": "https://jobs.fidelity.com/job-search/?keyword=intern",
     },
 
     # ── TRACK 1: CE / AI SE (key fall openers) ───────────────────────────
@@ -165,8 +165,8 @@ COMPANIES = [
         "slug": "databricks",
     },
     {
-        "name": "Cohere", "track": 1, "method": "greenhouse",
-        "slug": "cohere",
+        "name": "Cohere", "track": 1, "method": "page_hash",
+        "url": "https://cohere.com/careers",
     },
     {
         "name": "AWS (Amazon)", "track": 1, "method": "page_hash",

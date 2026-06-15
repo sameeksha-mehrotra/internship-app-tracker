@@ -1,4 +1,144 @@
 {
-  "last_run": null,
-  "companies": {}
+  "last_run": "2026-06-15T17:26:08.577650+00:00",
+  "companies": {
+    "McKinsey & Company": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "BCG": {
+      "seen_ids": [],
+      "hash": "f8d3366d2cf45a404a375d2e29f47e74d092eb6066014d79611b4799b47bf67b"
+    },
+    "Bain & Company": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Deloitte": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "PwC Strategy&": {
+      "seen_ids": [],
+      "hash": "37ef63b6935bcb06de283e56c1aac7ea090c19c3fea23445663ee51772be8684"
+    },
+    "KPMG Advisory": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "EY-Parthenon": {
+      "seen_ids": [],
+      "hash": "d8be573044bf29175bcf06f910654d7fc67c32c2b22fe7c4fe8dfb0cfc14f235"
+    },
+    "Oliver Wyman": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "LEK Consulting": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Accenture Strategy": {
+      "seen_ids": [],
+      "hash": "19f6f96cfc4fdd6332c324df8babd1b23ffaff273a53888bc230f119ec8f24b2"
+    },
+    "Goldman Sachs": {
+      "seen_ids": [],
+      "hash": "d613d22a5ac131df2eb52e69c0c89ba711b4d0f1e7dcb89416f5a939b2b33cee"
+    },
+    "JPMorgan": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Morgan Stanley": {
+      "seen_ids": [],
+      "hash": "db7331f9173542ea5f03ac33dbda5d0fe8db70235f76d7a207edcffa60978b01"
+    },
+    "Bank of America": {
+      "seen_ids": [],
+      "hash": "f435ccb4fe11ecb23fdc551a431e5a21d54b2fb8c98215214457388b560a3c01"
+    },
+    "Citigroup": {
+      "seen_ids": [
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
+        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946"
+      ],
+      "hash": null
+    },
+    "Barclays": {
+      "seen_ids": [],
+      "hash": "1d340073b7657c327830cb6bc554be6ea76c64ffc23e9cc885ab5feb238c09a4"
+    },
+    "Deutsche Bank": {
+      "seen_ids": [],
+      "hash": "3c15d55dcd1f54dc0a8edc2d79d3df8f7e2da5ea6b697b540cb7c954c83ec7ef"
+    },
+    "UBS": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "BlackRock": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Blackstone": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "KKR": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Citadel": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Point72": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Jane Street": {
+      "seen_ids": [],
+      "hash": "143d4c990bf54ceb37623463a949efa0c46b277426c464e35e0b67b4a74016a5"
+    },
+    "Bridgewater": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Fidelity": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "Google (BOLD / gTech)": {
+      "seen_ids": [],
+      "hash": "181da5c68f85c0213bf8aa39a7059c7d4653012a35ea9b6085ea154b884f2d46"
+    },
+    "Salesforce": {
+      "seen_ids": [],
+      "hash": "3fe2f2253a961883989583c390d8c0698a3c426575e14f642261bbf9bc026433"
+    },
+    "Databricks": {
+      "seen_ids": [
+        "5646866002",
+        "8012658002",
+        "7011263002",
+        "8459026002",
+        "8012818002",
+        "6544386002"
+      ],
+      "hash": null
+    },
+    "Cohere": {
+      "seen_ids": [],
+      "hash": null
+    },
+    "AWS (Amazon)": {
+      "seen_ids": [],
+      "hash": "0ced4a53e3acb3fb1440ae5762b4445ec69ad5c3bbe1704a289e910d96564359"
+    }
+  }
 }
