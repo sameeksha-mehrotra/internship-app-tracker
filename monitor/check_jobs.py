@@ -45,18 +45,23 @@ HEADERS = {
 
 COMPANIES = [
     # ── TRACK 4: Big 4 Consulting ─────────────────────────────────────────
-    {
-        "name": "McKinsey & Company", "track": 4, "method": "page_hash",
-        "url": "https://www.mckinsey.com/careers/search-jobs",
-    },
+
+    # MANUALLY CHECK — bot-blocked, cannot be auto-monitored:
+    #   McKinsey: entire mckinsey.com domain times out (IP-level block)
+    #   Bain:     bain.com/careers/* returns 403 across all paths
+    # Neither uses Greenhouse or Lever. Check their sites directly each week.
+    # {
+    #     "name": "McKinsey & Company", "track": 4, "method": "page_hash",
+    #     "url": "https://www.mckinsey.com/careers/search-jobs",
+    # },
     {
         "name": "BCG", "track": 4, "method": "page_hash",
         "url": "https://careers.bcg.com/students",
     },
-    {
-        "name": "Bain & Company", "track": 4, "method": "page_hash",
-        "url": "https://www.bain.com/careers/find-a-role/?type=Internship",
-    },
+    # {
+    #     "name": "Bain & Company", "track": 4, "method": "page_hash",
+    #     "url": "https://www.bain.com/careers/find-a-role/?type=Internship",
+    # },
     {
         "name": "Deloitte", "track": 4, "method": "page_hash",
         "url": "https://apply.deloitte.com/careers/SearchJobs/intern",
@@ -131,10 +136,12 @@ COMPANIES = [
         "name": "KKR", "track": 5, "method": "page_hash",
         "url": "https://www.kkr.com/careers",
     },
-    {
-        "name": "Citadel", "track": 5, "method": "page_hash",
-        "url": "https://www.citadel.com/careers/open-positions/",
-    },
+    # MANUALLY CHECK — citadel.com/careers/* returns 403 across all paths,
+    # does not use Greenhouse or Lever. Check their site directly each week.
+    # {
+    #     "name": "Citadel", "track": 5, "method": "page_hash",
+    #     "url": "https://www.citadel.com/careers/open-positions/",
+    # },
     {
         "name": "Point72", "track": 5, "method": "page_hash",
         "url": "https://careers.point72.com/?experience=Early+Career%3BInternships",
