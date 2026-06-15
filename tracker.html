@@ -36,6 +36,8 @@
 <script type="text/babel">
 const { useState, useCallback, useEffect, useRef } = React;
 
+const MONITOR_URL = "https://raw.githubusercontent.com/sameeksha-mehrotra/internship-app-tracker/main/monitor/new_findings.json";
+
 function daysUntil(openDate, now) {
   return Math.ceil((new Date(openDate) - (now || new Date())) / 86400000);
 }
@@ -975,6 +977,103 @@ function AddEntryModal({ onClose, onAdd }) {
   );
 }
 
+function MonitorDetections({ onAdd }) {
+  const [findings, setFindings] = useState([]);
+  const [loaded, setLoaded]     = useState(false);
+
+  useEffect(() => {
+    const dismissed = JSON.parse(localStorage.getItem('monitor_dismissed') || '[]');
+    const added     = JSON.parse(localStorage.getItem('monitor_added')     || '[]');
+    fetch(MONITOR_URL + '?nocache=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(data => {
+        const visible = (data.findings || []).filter(f =>
+          !dismissed.includes(f.id) && !added.includes(f.id)
+        );
+        setFindings(visible);
+        setLoaded(true);
+      })
+      .catch(() => setLoaded(true));
+  }, []);
+
+  const dismiss = (id) => {
+    const prev = JSON.parse(localStorage.getItem('monitor_dismissed') || '[]');
+    localStorage.setItem('monitor_dismissed', JSON.stringify([...prev, id]));
+    setFindings(f => f.filter(x => x.id !== id));
+  };
+
+  const dismissAll = () => findings.forEach(f => dismiss(f.id));
+
+  const addToTracker = (f) => {
+    const prev = JSON.parse(localStorage.getItem('monitor_added') || '[]');
+    localStorage.setItem('monitor_added', JSON.stringify([...prev, f.id]));
+    onAdd({
+      id: Date.now(),
+      company: f.company,
+      role: f.role,
+      track: f.track,
+      group: 'immediate',
+      status: 'Not Started',
+      deadline: '🟢 OPEN NOW — Detected by job monitor',
+      pay: 'See posting',
+      fit: 3,
+      priority: 'HIGH',
+      pulse: false,
+      highlight: false,
+      notes: `Auto-detected by job monitor on ${f.detected ? f.detected.slice(0,10) : 'unknown'}. Apply: ${f.url}`,
+    });
+    setFindings(x => x.filter(y => y.id !== f.id));
+  };
+
+  if (!loaded || !findings.length) return null;
+
+  return (
+    <div className="mb-5 rounded-2xl overflow-hidden border border-violet-300 shadow-sm">
+      <div className="bg-gradient-to-r from-violet-700 to-violet-600 px-5 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-violet-300 animate-pulse shrink-0"/>
+          <span className="text-white font-black text-sm">
+            Monitor Detected {findings.length} New Posting{findings.length !== 1 ? 's' : ''}
+          </span>
+          <span className="text-violet-300 text-[10px] hidden sm:inline">· auto-fetched from GitHub</span>
+        </div>
+        <button onClick={dismissAll} className="text-violet-300 hover:text-white text-xs font-semibold">
+          dismiss all
+        </button>
+      </div>
+      <div className="bg-white divide-y divide-slate-100">
+        {findings.map(f => {
+          const tc = T[f.track] || T[1];
+          return (
+            <div key={f.id} className="px-5 py-3 flex items-center justify-between gap-3 hover:bg-slate-50">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-black shrink-0 ${tc.badge}`}>{tc.short}</span>
+                <div className="min-w-0">
+                  <span className="text-slate-900 font-bold text-xs">{f.company}</span>
+                  <span className="text-slate-600 text-xs ml-1.5">{f.role}</span>
+                  {f.location && <span className="text-slate-400 text-[10px] ml-1.5">· {f.location}</span>}
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                {f.url && (
+                  <a href={f.url} target="_blank" rel="noopener noreferrer"
+                    className="text-[10px] text-blue-500 hover:text-blue-700 font-semibold">view →</a>
+                )}
+                <button onClick={() => addToTracker(f)}
+                  className="text-[10px] bg-emerald-600 text-white px-2.5 py-1 rounded-lg font-bold hover:bg-emerald-500 whitespace-nowrap">
+                  + Add
+                </button>
+                <button onClick={() => dismiss(f.id)}
+                  className="text-[10px] text-slate-400 hover:text-slate-600 font-bold">✕</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function LiveMonitor({ apps, onUpdate }) {
   const [now, setNow] = useState(() => new Date());
 
@@ -1063,6 +1162,7 @@ function TrackerTab({ apps, onUpdate, onAdd, onRemove }) {
           + Add Entry
         </button>
       </div>
+      <MonitorDetections onAdd={onAdd}/>
       <LiveMonitor apps={apps} onUpdate={onUpdate}/>
       <StatsBar apps={apps}/>
       {GROUPS.map(g => <GroupSection key={g.key} gk={g.key} apps={apps} onUpdate={onUpdate} onRemove={onRemove}/>)}
