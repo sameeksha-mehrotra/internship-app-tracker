@@ -32,8 +32,18 @@
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+  /* Newer @babel/standalone defaults to the "automatic" JSX runtime, which
+     emits `import { jsx } from 'react/jsx-runtime'` — invalid in a non-module
+     script tag and incompatible with React loaded as a UMD global.
+     Register a preset that locks the runtime to "classic" so JSX compiles
+     to plain React.createElement calls with no import statements. */
+  Babel.registerPreset('react-classic', {
+    presets: [[Babel.availablePresets['react'], { runtime: 'classic' }]]
+  });
+</script>
 <div id="root"></div>
-<script type="text/babel">
+<script type="text/babel" data-presets="react-classic">
 const { useState, useCallback, useEffect, useRef } = React;
 
 const MONITOR_URL = "https://raw.githubusercontent.com/sameeksha-mehrotra/internship-app-tracker/main/monitor/new_findings.json";
