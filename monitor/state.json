@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-26T16:11:23.785836+00:00",
+  "last_run": "2026-06-27T15:12:40.360382+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "5d4fd677a6cf0d2fca6bf2f3d542be4ae3b1a0704259212a38e1f7a9b0d7e0d3"
+      "hash": "ac1f77ce7b0154b57033aaa16ccebbbffa11a88ee8fa0261d22c83005eefcf12"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,11 +15,11 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "7e914f142a3722d835633cd60e1b776a8ce964fba87b609b2e41ab8bc4e7b403"
+      "hash": "710e5478e7443ee59fbf6d090728bdfbdc9358020c393ab63a14201a783d676c"
     },
     "PwC Strategy&": {
       "seen_ids": [],
-      "hash": "4b90c7ea6ac2846d2a214983347b7da9beff0da68e56d8814f4d4d8f07cb1ec5"
+      "hash": "d764bd7ca70fbb2470d7b4c0d531f4330e2e23874359195067a2a3b435f00df7"
     },
     "KPMG Advisory": {
       "seen_ids": [],
@@ -27,19 +27,19 @@
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "b5d653c61485ced98ad70d109e1657beb1bcc4fa15221f2209a8f2d8403e2a60"
+      "hash": "1c33c890721e3cb089d0034bf634736ce4e2e7810a5b38a69c0e79cbee5dc2e0"
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "b9052f0da2ac54af9b025f1a375c30a81716ca133d96c09b93d5c56b76fa872f"
+      "hash": "353de73be68d0deb251d2a25782371db1faf4aab67ef0f71b677328f2b1bcc60"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "44fa8fec2956814d221970a1e6ae1ee03ebf97d3fa4effb641964c78e2be9471"
+      "hash": "50bf34b757730798388456260e9f9559a0ba86b8af9aef4191efabcf9f50b0a6"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "f68bf0832c0f82d06175426886164667abed9781d30d50cfb50d4152685f0944"
+      "hash": "7040533dc256f18d67e8dcc15703850f4cd19d2f1f5f55b3a182aeadc19470db"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -51,29 +51,29 @@
     },
     "Morgan Stanley": {
       "seen_ids": [],
-      "hash": "7a58bb9bbc7ec14d26716d996bb9cef5852fb01001f0e116eb7d9e713d681540"
+      "hash": "2f597219f44f58b98a62d5828d5925be4a8a9629b7e84fe086069a8a9998927e"
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "f48eb0744d44dd201f68780bbc96afd913018cdcf1ef9b821ba82db1183de828"
+      "hash": "f9935a307ef1948cbafc7b928b04fe62cad3ad2549578499a7cb05d807ac62d8"
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
-        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
         "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
         "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
         "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
         "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
-        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380"
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "23c9c25724596814c7e9259da6b09db67f73ac81d2eecd3c095738ec24089f83"
+      "hash": "4303ad06e8f94fbcc98a6abe1b65a85094d07dcf46b86d555f94339e44c9283c"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -89,11 +89,11 @@
     },
     "Blackstone": {
       "seen_ids": [],
-      "hash": "251a6a6ead809b72708a94fc89d9a1243b3ce03faf6173e55165de2802baeebd"
+      "hash": "d536c959e762b074717720bb4198adb3894603e390663b9e68acfa454278a6f1"
     },
     "KKR": {
       "seen_ids": [],
-      "hash": "215d76f24d4eeaf90c3a80c2cb8e59763ebc231b1de310fd99fdc06931cee5f2"
+      "hash": "bab3e392c99fe708a20f9963fd4764956b20ed1986346057149ee8b1ff4bac1a"
     },
     "Citadel": {
       "seen_ids": [],
@@ -101,11 +101,11 @@
     },
     "Point72": {
       "seen_ids": [],
-      "hash": "74a64973f41f18d65cbe0469c890ed4a85354cad6553fb8df55ae4dbd558981b"
+      "hash": "812e3c9f8706097c2033d02a44bd70274a307951a78327cb3d4713f3c1f456d3"
     },
     "Jane Street": {
       "seen_ids": [],
-      "hash": "5671ef6d38c96491167f40064496caf0199f7550ee043f35de2b0da4a8dc4780"
+      "hash": "9564cccadec6d86c8abe38cda158a2b9762a08224b7e55334358d7341ec6acc2"
     },
     "Bridgewater": {
       "seen_ids": [],
@@ -113,11 +113,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "1cf9125ee87ca39fe3398ef9f1a5779d487420e18d475c6650917b7b199d9eb4"
+      "hash": "5c8473ef96c428e0ffa970f4a57e6c9a9ed14d9f04b8f6799cbafc69bfe82247"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "14c802f2ebf70b765c74e7a0b8ddbf3485f2f9008110ada220a31bc7e6cd2ff8"
+      "hash": "64723fac793c19d24f94cfd0d9a42d83e116ea1c562ce4071568a1a213f7161b"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -125,22 +125,22 @@
     },
     "Databricks": {
       "seen_ids": [
-        "5646866002",
         "8012818002",
         "8012658002",
+        "7011263002",
         "8459026002",
-        "6544386002",
-        "7011263002"
+        "5646866002",
+        "6544386002"
       ],
       "hash": null
     },
     "Cohere": {
       "seen_ids": [],
-      "hash": "03d98c5c82fa1b600c6b671fa1a0213c038ed36aec709bc829108c601e8c3a67"
+      "hash": "757b902cf31b18a46dffdd3358d49a9156b60b5ed60063681f16cac7aec4586b"
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "c4368d57e391e0416438e01568fb26f124391e56f7b440578bcefc95795a796e"
+      "hash": "baaa333a8ea31c2cb0d0ff95b68c340d97480a6a7647215bf0dcb188193dd94d"
     }
   }
 }
