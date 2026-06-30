@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T16:50:38.619087+00:00",
+  "last_updated": "2026-06-30T16:21:06.343329+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -39,6 +39,16 @@
       "url": "https://citi.wd5.myworkdayjobs.com/2/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
       "location": "Mississauga, ON",
       "detected": "2026-06-15T17:26:08.577650+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
+      "company": "Citigroup",
+      "role": "Research, Part-time Intern, Tokyo-JPN, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
+      "location": "Chiyoda-ku Tokyo Japan",
+      "detected": "2026-06-30T16:21:06.343329+00:00",
       "source": "workday"
     }
   ]
