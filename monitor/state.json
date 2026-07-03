@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-02T16:02:22.111772+00:00",
+  "last_run": "2026-07-03T15:50:24.814278+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "ccd7111524556d666e77cf15f73f556cfe8beb1066d9fd6eb39cdf8d38522e52"
+      "hash": "bbfd0fabb064461838f25d575e37175f8b00f6d77703338eb535fcb984bc49e1"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,11 +15,11 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "4d668e34a80cbe19ab452bffe8bb82422fe9d92a6985091ba410a75352afa1e0"
+      "hash": "6593078c7ae082eb7e29695bc950644345ed40441c10e819f4e7e0750696aa92"
     },
     "PwC Strategy&": {
       "seen_ids": [],
-      "hash": "52b941f8e05cad2f827867041541353135cbdd9e41e62a2742e0ede3defa7301"
+      "hash": "e95592234637ca40f972fa60662e4a94d146da56efcd6fd1aa95048ae5c4d8da"
     },
     "KPMG Advisory": {
       "seen_ids": [],
@@ -31,15 +31,15 @@
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "ac3910bf67f8a63fef36a190a54d80df5c2b33c6fed3d9b9af94936ada46bbee"
+      "hash": "705c54fc9f1e3d52f526b33708ac9042c5619bd94a4a16c28ae61f59a3c738ec"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "eee8bce58096b42b611b32f8e88daa6a53400bf131d01935061a8cbb577fcead"
+      "hash": "85fa2503ef562ad9ae39a88010a7804ca61c8b8c5ee97fdf0bbfd2374890b1e4"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "d7b239462f92009c02fe642e416d69bbc41fc946bb0725aeef7b16a31e2bf08e"
+      "hash": "2066211f7b146e8f6afbc6cfb11fd9665fd16274b0d45e2d23af41a3bf0983b5"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -55,27 +55,27 @@
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "7ba3717281413952363b48df0ffa8295ac7fd100faa1eb203386027ab7628699"
+      "hash": "18c46bdfb2dccfc0bcce786a942de6448cd514460eee581f51679c115d058a11"
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
-        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
-        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
-        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
         "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
-        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
         "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
         "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
         "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "095d15f51b431ccaf534db52382947ecb3a148a163ad1661fbbee93b491a2258"
+      "hash": "d756a25e97dce2d269c902177d96e6cf7637c88ca9e111d8aad4197bcf3348f1"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -91,7 +91,7 @@
     },
     "Blackstone": {
       "seen_ids": [],
-      "hash": "df48a1184ec2ba35e28a5c34aac8238e3beef5ece1be1ed7a78f034798cce4b5"
+      "hash": "c735e07f2fa91cbeebf0b4071afcb3eb557f2e0ecd1d777a9199cfbf1913820e"
     },
     "KKR": {
       "seen_ids": [],
@@ -103,7 +103,7 @@
     },
     "Point72": {
       "seen_ids": [],
-      "hash": "ed3d86c4de7a9ec73f5b032e65254038961ea2c9d7200a36bc7bf1b14eed817c"
+      "hash": "b4b35df366b1c6063ac741abac3daa94f8c4d2c5bbfe10be4fd1e08c087624a9"
     },
     "Jane Street": {
       "seen_ids": [],
@@ -115,11 +115,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "67be402ff32f794979b24a1c69014b08c3f33a9fbadfa4b0db237b366ec4fda5"
+      "hash": "cb34c834d0c6e0f4a594e26695568061c8f7b099e328be00f77b21cc967dec61"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "5b89a29b45c53e64631f123de45ce163e4822ad8671dd29ecc8e748adc101600"
+      "hash": "dafef43c46a7713d0d6cb02e3c9540625bb470a813587fce4b78d52d90f18efe"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -127,10 +127,10 @@
     },
     "Databricks": {
       "seen_ids": [
+        "8012818002",
+        "8012658002",
         "6544386002",
         "7011263002",
-        "8012658002",
-        "8012818002",
         "5646866002",
         "8459026002"
       ],
@@ -138,11 +138,11 @@
     },
     "Cohere": {
       "seen_ids": [],
-      "hash": "aa83cbc84236424f196c9a7519714c67e8b10d9c891d92dfa7bef704d8fbb6ad"
+      "hash": "18ee621cc9800498d5d511850219b9c78371fdc5a3594017ac645294c32d14ad"
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "c19f19e8e5b9558180264ff8775facf9aa3c2275747b55a98fa2aac29a96e961"
+      "hash": "33571ef0c45b76ae4cfed19fd2fe4b635d6c948f15a8863fb9127eb70fde9d74"
     }
   }
 }
