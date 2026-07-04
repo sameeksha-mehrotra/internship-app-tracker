@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-03T15:50:24.814278+00:00",
+  "last_run": "2026-07-04T15:01:18.763747+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "bbfd0fabb064461838f25d575e37175f8b00f6d77703338eb535fcb984bc49e1"
+      "hash": "c722511b8cf5b99b6105923fa4bc6616eda5fe80cd12259119a06cb3327c4836"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,11 +15,11 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "6593078c7ae082eb7e29695bc950644345ed40441c10e819f4e7e0750696aa92"
+      "hash": "0b813b15cb7d3955740b6dfb1e5595f1cc311ee8b9ba3cfd0e8a198cdd287bc1"
     },
     "PwC Strategy&": {
       "seen_ids": [],
-      "hash": "e95592234637ca40f972fa60662e4a94d146da56efcd6fd1aa95048ae5c4d8da"
+      "hash": "43babfe029a886f807638159743cdec53f7a011ce901a766c03a5c8a82dd40fa"
     },
     "KPMG Advisory": {
       "seen_ids": [],
@@ -27,19 +27,19 @@
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "dade66f668dfb75328327cad46b00918e89b7580f801b0ac94e76ca925ef9f6d"
+      "hash": "c7251d1365d6a7ef4b9c49c4172038dac4d9111269a6d1b8837685a0638bf860"
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "705c54fc9f1e3d52f526b33708ac9042c5619bd94a4a16c28ae61f59a3c738ec"
+      "hash": "5a400ebf0cf3c437e76262bef9a582ad477504bc10b9e0440702ef0c9142e889"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "85fa2503ef562ad9ae39a88010a7804ca61c8b8c5ee97fdf0bbfd2374890b1e4"
+      "hash": "930e0a77a0b809ff352a3a3df69b55571d2fcc76710c44f92feb9c440ad428b8"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "2066211f7b146e8f6afbc6cfb11fd9665fd16274b0d45e2d23af41a3bf0983b5"
+      "hash": "131d36401d4badae64e13aeeaf91464abe1cb4a5b25e8903d889b4875c0f5687"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -55,27 +55,27 @@
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "18c46bdfb2dccfc0bcce786a942de6448cd514460eee581f51679c115d058a11"
+      "hash": "588c2ac7aa9208372a745d22004538ef8386be71d074610f2ee5f4abde337eba"
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
-        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
-        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
-        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
-        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
-        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
         "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
         "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
+        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
         "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
-        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660"
+        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "d756a25e97dce2d269c902177d96e6cf7637c88ca9e111d8aad4197bcf3348f1"
+      "hash": "416a8b49199da8c3f569f57146bec963ac5f9a43c6ee436be5d17343bb07d7db"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -91,11 +91,11 @@
     },
     "Blackstone": {
       "seen_ids": [],
-      "hash": "c735e07f2fa91cbeebf0b4071afcb3eb557f2e0ecd1d777a9199cfbf1913820e"
+      "hash": "0eb4717894576d30d447ec9551932d37de91cbb83499a98838bf51d55cc1c4d3"
     },
     "KKR": {
       "seen_ids": [],
-      "hash": "68d524d710a659f955123ae2322a876e03c0d0bdcdd744fb9e9f327cc0280cee"
+      "hash": "0de64f9be0443200d3d92bed5fe8e68e0143d01b0a79eff2b0b2900c5f53f05e"
     },
     "Citadel": {
       "seen_ids": [],
@@ -103,7 +103,7 @@
     },
     "Point72": {
       "seen_ids": [],
-      "hash": "b4b35df366b1c6063ac741abac3daa94f8c4d2c5bbfe10be4fd1e08c087624a9"
+      "hash": "0551569e39e897fdda94e4c7bf3e7e3c8b6ffafdc73c74a5ec1c03c5362d5992"
     },
     "Jane Street": {
       "seen_ids": [],
@@ -115,11 +115,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "cb34c834d0c6e0f4a594e26695568061c8f7b099e328be00f77b21cc967dec61"
+      "hash": "2fce4d021488165617b5dd7f2854d614881497f598a3008ce1db3881d3cc7b49"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "dafef43c46a7713d0d6cb02e3c9540625bb470a813587fce4b78d52d90f18efe"
+      "hash": "307f0ff36f57ccef8856e0bae7461e66fb7db47101e7322f912f598416221829"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -128,21 +128,21 @@
     "Databricks": {
       "seen_ids": [
         "8012818002",
-        "8012658002",
         "6544386002",
-        "7011263002",
+        "8012658002",
+        "8459026002",
         "5646866002",
-        "8459026002"
+        "7011263002"
       ],
       "hash": null
     },
     "Cohere": {
       "seen_ids": [],
-      "hash": "18ee621cc9800498d5d511850219b9c78371fdc5a3594017ac645294c32d14ad"
+      "hash": "0daac002fd48e196ef2ccf116bf5e82d7b24a1c2414e9e87a093a35404ffa3e0"
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "33571ef0c45b76ae4cfed19fd2fe4b635d6c948f15a8863fb9127eb70fde9d74"
+      "hash": "e572ec636c69cc9b8abd2561686efec0b28e3a3ab580e27e774d7d1fcc8f4c4e"
     }
   }
 }
