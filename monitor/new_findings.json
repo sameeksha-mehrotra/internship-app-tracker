@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T16:49:28.364270+00:00",
+  "last_updated": "2026-07-07T16:25:00.264916+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -59,6 +59,16 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
       "location": "New York New York United States",
       "detected": "2026-07-02T16:02:22.111772+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
+      "company": "Citigroup",
+      "role": "Markets - Summer Internship Program, Boston Career Forum in 2026, Tokyo - Japan, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
+      "location": "Chiyoda-ku Tokyo Japan",
+      "detected": "2026-07-07T16:25:00.264916+00:00",
       "source": "workday"
     }
   ]
