@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T15:22:37.906347+00:00",
+  "last_updated": "2026-07-16T15:29:05.536727+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -99,6 +99,116 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Toronto---Canada/Services--Full-Time-Analyst--Toronto---CA--2027_26975984",
       "location": "Toronto - Canada",
       "detected": "2026-07-10T16:21:36.582852+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
+      "company": "Citigroup",
+      "role": "NAM Canada Corporate Banking, 2027 Full Time Analyst, Montreal (Corporates)/Services bancaires aux entreprises, Am\u00e9rique du Nord-Canada, Analyste \u00e0 temps plein, programme 2027, Montr\u00e9al (entreprises)",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
+      "location": "Quebec Canada",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Toronto---Canada/Banking---Investment-Banking--Full-Time-Analyst--Toronto---CAN--2027_26979068",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Full Time Analyst, Toronto - CAN, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Toronto---Canada/Banking---Investment-Banking--Full-Time-Analyst--Toronto---CAN--2027_26979068",
+      "location": "Toronto - Canada",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Full Time Analyst, Houston - US 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
+      "location": "Houston Texas United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
+      "company": "Citigroup",
+      "role": "Banking \u2013 Investment Banking, Full Time Analyst, Chicago - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
+      "location": "Chicago Illinois United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
+      "company": "Citigroup",
+      "role": "Banking - Corporate Banking Corporates, Full Time Analyst, Toronto - CAN, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
+      "location": "Toronto - Canada",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Los-Angeles-California-United-States/Banking--Investment-Banking--Full-Time-Analyst--Los-Angeles---USA--2027_26978170",
+      "company": "Citigroup",
+      "role": "Banking, Investment Banking, Full Time Analyst, Los Angeles \u2013 USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Los-Angeles-California-United-States/Banking--Investment-Banking--Full-Time-Analyst--Los-Angeles---USA--2027_26978170",
+      "location": "Los Angeles California United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Analyst--New-York---USA--2027_26978721",
+      "company": "Citigroup",
+      "role": "Banking - Capital Markets, Full Time Analyst, New York - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Analyst--New-York---USA--2027_26978721",
+      "location": "New York New York United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
+      "company": "Citigroup",
+      "role": "Banking - Capital Markets LatAm, Full Time Analyst, New York City - US, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
+      "location": "New York New York United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Full Time Analyst, New York City - US 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
+      "location": "New York New York United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
+      "company": "Citigroup",
+      "role": "Banking, Investment Banking, Full Time Analyst, Boston Technology(Software) \u2013 USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
+      "location": "Boston Massachusetts United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
+      "company": "Citigroup",
+      "role": "Banking - Financial Strategy Group, Full Time Analyst, New York - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
+      "location": "New York New York United States",
+      "detected": "2026-07-16T15:29:05.536727+00:00",
       "source": "workday"
     }
   ]
