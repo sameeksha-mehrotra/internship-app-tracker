@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-16T15:29:05.536727+00:00",
+  "last_run": "2026-07-17T15:09:25.330218+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "e64a9a4a75e5173d5c069d72c9a6e762381c50a393267e3dc85d73d303216ae8"
+      "hash": "02f45f297fe269b1c9fd7156db2280a3bb177ec280dba25d6555a781df58acd1"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,11 +15,11 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "208c147d07d3e3ebe0e79299233087ba48c947498b63f3e3b33d172bf5c380ff"
+      "hash": "ec47092f501935dbf19d7a50aac0f721b19bcdb2bbcf041134e9b7aa9ccdaf35"
     },
     "PwC Strategy&": {
       "seen_ids": [],
-      "hash": "117b926f6f14699f3ecf4b892433082efee64607a020aecc30f0b0642b64cc5b"
+      "hash": "5553bb7ec206fe044a5643136ed94f0e38eb5f445fadadc4a286469e3ebd9d14"
     },
     "KPMG Advisory": {
       "seen_ids": [],
@@ -27,19 +27,19 @@
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "ce18be2e6356eced2ae95439297e25b9ef8ef88305a9588e5ae5626eae21163d"
+      "hash": "3677f6857e6920db625a353970241ebfdc52332139c577d5d7eaaf7325ccdd7d"
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "5a09c71baf596221a53b0ddca49f69454fc9e36153b94544fbb975f3b52fdfec"
+      "hash": "26878a9e8524fa7931e404be2bf94e2b6d70d4713df72515fde78460c18a7a7c"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "ad945da2f2b09bfe9246568d81c5104813ba3e004a4e7e26ca3e87b5ee5f72fe"
+      "hash": "c50f9d01baff8d4d11e4c2e022a633af1c5bc3eb64a4842cd1933e8c41a1e5e8"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "e416bd974249fd08f204e0e48fbca05d21263db10946a6e06f5fa0a7ec324f54"
+      "hash": "556bf771808fc3f1d0e6b791e7b7b125945226ef926346bc3c7ffecf38cb7ee9"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -55,42 +55,49 @@
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "b3fb7aa852266d861687589973d49d1b6a367a85874408126a126afa53b4f092"
+      "hash": "98f246a80522ab8fa1970c34c055547a9350fa42ca75bc7a07710e62fba3101a"
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
-        "/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
-        "/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
-        "/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
-        "/job/Los-Angeles-California-United-States/Banking--Investment-Banking--Full-Time-Analyst--Los-Angeles---USA--2027_26978170",
-        "/job/Toronto---Canada/Services--Full-Time-Analyst--Toronto---CA--2027_26975984",
-        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
-        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Full-Time-Analyst--New-York---USA--2027_26979638",
+        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
+        "/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
         "/job/Hong-Kong--Hong-Kong/Markets---Sales-and-Trading--Summer-Analyst--Hong-Kong---2027_26978275",
         "/job/Toronto---Canada/Banking---Investment-Banking--Full-Time-Analyst--Toronto---CAN--2027_26979068",
-        "/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
-        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
-        "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
-        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
-        "/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
-        "/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
-        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
-        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
-        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
-        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
-        "/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
-        "/job/Singapore--Singapore/Markets---Sales-and-Trading--Summer-Analyst--Singapore---2027_26978287",
+        "/job/Los-Angeles-California-United-States/Banking--Investment-Banking--Full-Time-Analyst--Los-Angeles---USA--2027_26978170",
+        "/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
+        "/job/Chicago-Illinois-United-States/Banking---Corporate-Banking--Full-Time-Analyst--Chicago---USA--2027_26978398",
         "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Analyst--New-York---USA--2027_26978721",
-        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946"
+        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
+        "/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
+        "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
+        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/San-Francisco-California-United-States/Banking---Corporate-Banking--Full-Time-Analyst--San-Francisco---USA--2027_26978406",
+        "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Associate--New-York-City---US-2027_26979364",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Singapore--Singapore/Markets---Sales-and-Trading--Summer-Analyst--Singapore---2027_26978287",
+        "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Associate--New-York-City---US-2027_26979362",
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
+        "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
+        "/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
+        "/job/New-York-New-York-United-States/Banking---Corporate-Banking--Full-Time-Analyst--New-York---USA--2027_26978394",
+        "/job/Toronto---Canada/Services--Full-Time-Analyst--Toronto---CA--2027_26975984",
+        "/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
+        "/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "0bb29e131f9f261b3b239dc93b8588fd77dd5cea84a086d50731a589d67947ad"
+      "hash": "acdf05888ca4744a918404a853943950a09f156f95ff5e0d1cb1c73b1416a930"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -106,11 +113,11 @@
     },
     "Blackstone": {
       "seen_ids": [],
-      "hash": "32b32c917faaf30793d07f955f2b27336e303c2f815231197575fc7b01410be7"
+      "hash": "f64afe548c58cf878c669eeb873c4c2537f25d24f0a7842e107652c4256cc287"
     },
     "KKR": {
       "seen_ids": [],
-      "hash": "93e35ef98f2f814f68d9008e334f525cd61644446b23136df8c30f0743a5e542"
+      "hash": "a21e483d0fc645e62436a56016ea83bb658e82dcc16c43192fc102b9dfe62432"
     },
     "Citadel": {
       "seen_ids": [],
@@ -118,7 +125,7 @@
     },
     "Point72": {
       "seen_ids": [],
-      "hash": "b98f75461590c18c81312e3a8f29ef3e1cd62101eeeec060beedf2eb2f4f273f"
+      "hash": "7f5a1a93a71cd7f591a28522b3cc71a5bc525738df9973e8f1c0ac5641fd62d5"
     },
     "Jane Street": {
       "seen_ids": [],
@@ -130,11 +137,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "4199bcb53b753b425ba3cac0255c1851610f1248a26ae8f2acf0e030bd4eb342"
+      "hash": "b84c2f946ee0727bc700beba25f4a038bacca5e1b92e2b97c01768ddf37dd492"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "b6e057afec140b02e3263199b5b02dd53f1464fe167f42fae57a2e7460cbe52f"
+      "hash": "2cf3899c079f7ad6c1641f1ff17bdaf16ead7d4362827c4c4c9a0de4b4696b36"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -142,22 +149,24 @@
     },
     "Databricks": {
       "seen_ids": [
-        "8459026002",
         "5646866002",
-        "7011263002",
+        "8012818002",
+        "6883068002",
         "8012658002",
+        "7011263002",
+        "7586263002",
         "6544386002",
-        "8012818002"
+        "8459026002"
       ],
       "hash": null
     },
     "Cohere": {
       "seen_ids": [],
-      "hash": "802cfd5863b354e15ced661110d218baa3860bcb4aa69910729e9d505ffdaac3"
+      "hash": "2ab5fbbb9d3ad70243f2787d923f385ec800486ef6676db021df50664b0002a8"
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "9a2f231dfa2c499198a5af39b9f8f98e015a63cccdd5534defec9a96fdbda2f7"
+      "hash": "61711523552c4c575d18d87762c195958181f4315cedebb536ebe8a58c4920b5"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16T15:29:05.536727+00:00",
+  "last_updated": "2026-07-17T15:09:25.330218+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -210,6 +210,96 @@
       "location": "New York New York United States",
       "detected": "2026-07-16T15:29:05.536727+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
+      "company": "Citigroup",
+      "role": "Markets - Quantitative Analysis, Full-Time Analyst, New York \u2013 USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
+      "location": "New York New York United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Chicago-Illinois-United-States/Banking---Corporate-Banking--Full-Time-Analyst--Chicago---USA--2027_26978398",
+      "company": "Citigroup",
+      "role": "Banking - Corporate Banking, Full Time Analyst, Chicago - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Chicago-Illinois-United-States/Banking---Corporate-Banking--Full-Time-Analyst--Chicago---USA--2027_26978398",
+      "location": "Chicago Illinois United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Corporate-Banking--Full-Time-Analyst--New-York---USA--2027_26978394",
+      "company": "Citigroup",
+      "role": "Banking - Corporate Banking, Full Time Analyst, New York - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Corporate-Banking--Full-Time-Analyst--New-York---USA--2027_26978394",
+      "location": "New York New York United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/San-Francisco-California-United-States/Banking---Corporate-Banking--Full-Time-Analyst--San-Francisco---USA--2027_26978406",
+      "company": "Citigroup",
+      "role": "Banking - Corporate Banking, Full Time Analyst, San Francisco - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/San-Francisco-California-United-States/Banking---Corporate-Banking--Full-Time-Analyst--San-Francisco---USA--2027_26978406",
+      "location": "San Francisco California United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Full-Time-Analyst--New-York---USA--2027_26979638",
+      "company": "Citigroup",
+      "role": "Markets \u2013 Sales and Trading, Full Time Analyst, New York - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Full-Time-Analyst--New-York---USA--2027_26979638",
+      "location": "New York New York United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Associate--New-York-City---US-2027_26979364",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Full Time Associate, New York City - US 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Associate--New-York-City---US-2027_26979364",
+      "location": "New York New York United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Associate--New-York-City---US-2027_26979362",
+      "company": "Citigroup",
+      "role": "Banking - Capital Markets, Full Time Associate, New York City - US 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Associate--New-York-City---US-2027_26979362",
+      "location": "New York New York United States",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Databricks::7586263002",
+      "company": "Databricks",
+      "role": "Associate Product Manager, New Grad (2027 Start)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=7586263002",
+      "location": "Bellevue, Washington; Mountain View, California; San Francisco, California",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::6883068002",
+      "company": "Databricks",
+      "role": "Product Management Intern (Summer 2027)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6883068002",
+      "location": "Bellevue, Washington; Mountain View, California; San Francisco, California",
+      "detected": "2026-07-17T15:09:25.330218+00:00",
+      "source": "greenhouse"
     }
   ]
 }
