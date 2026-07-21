@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T15:46:34.728812+00:00",
+  "last_updated": "2026-07-21T15:39:11.682312+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -300,6 +300,16 @@
       "location": "Bellevue, Washington; Mountain View, California; San Francisco, California",
       "detected": "2026-07-17T15:09:25.330218+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Milan-Milano-Italy/Markets---Sales--Trading---Structuring--Off-Cycle-Internship--Milan--Italy--2026_26980265",
+      "company": "Citigroup",
+      "role": "Markets - Sales, Trading & Structuring, Off-Cycle Internship, Milan, Italy, 2026",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Milan-Milano-Italy/Markets---Sales--Trading---Structuring--Off-Cycle-Internship--Milan--Italy--2026_26980265",
+      "location": "Milan Milano Italy",
+      "detected": "2026-07-21T15:39:11.682312+00:00",
+      "source": "workday"
     }
   ]
 }
