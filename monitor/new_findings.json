@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22T15:28:23.987064+00:00",
+  "last_updated": "2026-07-23T15:51:22.412536+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -309,6 +309,36 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Milan-Milano-Italy/Markets---Sales--Trading---Structuring--Off-Cycle-Internship--Milan--Italy--2026_26980265",
       "location": "Milan Milano Italy",
       "detected": "2026-07-21T15:39:11.682312+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Services---Summer-Analyst--Singapore--2027_26978591",
+      "company": "Citigroup",
+      "role": "Services - Summer Analyst, Singapore, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Services---Summer-Analyst--Singapore--2027_26978591",
+      "location": "Singapore  Singapore",
+      "detected": "2026-07-23T15:51:22.412536+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Shanghai-Shanghai-China/Services---Summer-Analyst--China--2027_26978889",
+      "company": "Citigroup",
+      "role": "Services - Summer Analyst, China, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Shanghai-Shanghai-China/Services---Summer-Analyst--China--2027_26978889",
+      "location": "Shanghai Shanghai China",
+      "detected": "2026-07-23T15:51:22.412536+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Hong-Kong--Hong-Kong/Services---Summer-Analyst--Hong-Kong--2027_26978589",
+      "company": "Citigroup",
+      "role": "Services - Summer Analyst, Hong Kong, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Hong-Kong--Hong-Kong/Services---Summer-Analyst--Hong-Kong--2027_26978589",
+      "location": "Hong Kong  Hong Kong",
+      "detected": "2026-07-23T15:51:22.412536+00:00",
       "source": "workday"
     }
   ]
