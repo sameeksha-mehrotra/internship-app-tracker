@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T15:22:02.235150+00:00",
+  "last_updated": "2026-07-25T14:57:53.753686+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -349,6 +349,66 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Operations--Markets-Operations-Fulltime-Analyst---Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26980865",
       "location": "Chiyoda-ku Tokyo Japan",
       "detected": "2026-07-24T15:22:02.235150+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Getzville-New-York-United-States/Functions---Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981024",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Full Time Analyst, Buffalo - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Getzville-New-York-United-States/Functions---Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981024",
+      "location": "Getzville New York United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Irving-Texas-United-States/Functions---Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981043",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Full Time Analyst, Irving - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Irving-Texas-United-States/Functions---Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981043",
+      "location": "Irving Texas United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Tampa-Florida-United-States/Functions---Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981345",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Full Time Analyst, Tampa - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981345",
+      "location": "Tampa Florida United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981350",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Full Time Analyst, Tampa - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981350",
+      "location": "Tampa Florida United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981034",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Full Time Analyst, Buffalo - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981034",
+      "location": "Getzville New York United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981044",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Full Time Analyst, Irving - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981044",
+      "location": "Irving Texas United States",
+      "detected": "2026-07-25T14:57:53.753686+00:00",
       "source": "workday"
     }
   ]
