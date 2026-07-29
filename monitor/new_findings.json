@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28T16:01:56.147170+00:00",
+  "last_updated": "2026-07-29T15:47:17.988231+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -410,6 +410,16 @@
       "location": "Irving Texas United States",
       "detected": "2026-07-25T14:57:53.753686+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8337425002",
+      "company": "Databricks",
+      "role": "Manager, International Statutory & Technical Accounting",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8337425002",
+      "location": "London, United Kingdom",
+      "detected": "2026-07-29T15:47:17.988231+00:00",
+      "source": "greenhouse"
     }
   ]
 }
