@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30T15:47:41.813676+00:00",
+  "last_updated": "2026-07-31T15:58:47.788423+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -439,6 +439,36 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Investment-Banking---Summer-Internship-Program--Tokyo---Japan--2027_26982662",
       "location": "Chiyoda-ku Tokyo Japan",
       "detected": "2026-07-30T15:47:41.813676+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Irving-Texas-United-States/Functions---Internal-Audit--Full-Time-Analyst--Dallas---USA--2027_26983260",
+      "company": "Citigroup",
+      "role": "Functions - Internal Audit, Full-Time Analyst, Dallas - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Irving-Texas-United-States/Functions---Internal-Audit--Full-Time-Analyst--Dallas---USA--2027_26983260",
+      "location": "Irving Texas United States",
+      "detected": "2026-07-31T15:58:47.788423+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Tampa-Florida-United-States/Functions---Internal-Audit--Full-Time-Analyst--Tampa---USA--2027_26983267",
+      "company": "Citigroup",
+      "role": "Functions - Internal Audit, Full-Time Analyst, Tampa - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Internal-Audit--Full-Time-Analyst--Tampa---USA--2027_26983267",
+      "location": "Tampa Florida United States",
+      "detected": "2026-07-31T15:58:47.788423+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/New-York-New-York-United-States/Functions---Internal-Audit--Full-Time-Analyst--New-York---USA--2027_26983265",
+      "company": "Citigroup",
+      "role": "Functions - Internal Audit, Full-Time Analyst, New York - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Functions---Internal-Audit--Full-Time-Analyst--New-York---USA--2027_26983265",
+      "location": "New York New York United States",
+      "detected": "2026-07-31T15:58:47.788423+00:00",
       "source": "workday"
     }
   ]
