@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T16:08:56.762020+00:00",
+  "last_updated": "2026-08-05T15:58:55.106109+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -469,6 +469,26 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/New-York-New-York-United-States/Functions---Internal-Audit--Full-Time-Analyst--New-York---USA--2027_26983265",
       "location": "New York New York United States",
       "detected": "2026-07-31T15:58:47.788423+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Banking---Corporate-Banking--Summer-Analyst--Singapore---APAC--2027_26984370",
+      "company": "Citigroup",
+      "role": "Banking - Corporate Banking, Summer Analyst, Singapore \u2013 APAC, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Banking---Corporate-Banking--Summer-Analyst--Singapore---APAC--2027_26984370",
+      "location": "Singapore  Singapore",
+      "detected": "2026-08-05T15:58:55.106109+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Banking---Investment-Banking--Summer-Analyst--Singapore---APAC--2027_26984373",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Summer Analyst, Singapore \u2013 APAC, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Banking---Investment-Banking--Summer-Analyst--Singapore---APAC--2027_26984373",
+      "location": "Singapore  Singapore",
+      "detected": "2026-08-05T15:58:55.106109+00:00",
       "source": "workday"
     }
   ]
