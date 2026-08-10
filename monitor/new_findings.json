@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-09T14:28:35.459128+00:00",
+  "last_updated": "2026-08-10T14:52:48.141783+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -549,6 +549,26 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Full-Time-Analyst--Mississauga---ON--2027_26983269",
       "location": "Mississauga Ontario Canada",
       "detected": "2026-08-08T14:26:07.170775+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Banking---Commercial-Banking--Summer-Analyst--Singapore---APAC--2027_26985457",
+      "company": "Citigroup",
+      "role": "Banking - Commercial Banking, Summer Analyst, Singapore \u2013 APAC, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Banking---Commercial-Banking--Summer-Analyst--Singapore---APAC--2027_26985457",
+      "location": "Singapore  Singapore",
+      "detected": "2026-08-10T14:52:48.141783+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Kowloon--Hong-Kong/Banking---Commercial-Banking--Summer-Analyst--Hong-Kong---APAC--2027_26985455",
+      "company": "Citigroup",
+      "role": "Banking - Commercial Banking, Summer Analyst, Hong Kong \u2013 APAC, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Kowloon--Hong-Kong/Banking---Commercial-Banking--Summer-Analyst--Hong-Kong---APAC--2027_26985455",
+      "location": "Kowloon  Hong Kong",
+      "detected": "2026-08-10T14:52:48.141783+00:00",
       "source": "workday"
     }
   ]
