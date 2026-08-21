@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20T14:29:40.716658+00:00",
+  "last_updated": "2026-08-21T14:28:40.584491+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -590,6 +590,16 @@
       "location": "Taipei Taipei City Taiwan",
       "detected": "2026-08-17T14:20:47.894827+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8732364002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - Winter",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8732364002",
+      "location": "Bellevue, Washington; Mountain View, California; San Francisco, California",
+      "detected": "2026-08-21T14:28:40.584491+00:00",
+      "source": "greenhouse"
     }
   ]
 }
