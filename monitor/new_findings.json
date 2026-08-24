@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-23T14:17:00.910846+00:00",
+  "last_updated": "2026-08-24T14:35:43.979721+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -600,6 +600,46 @@
       "location": "Bellevue, Washington; Mountain View, California; San Francisco, California",
       "detected": "2026-08-21T14:28:40.584491+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Wealth---Citigold--Summer-Analyst--Singapore--2027_26988476",
+      "company": "Citigroup",
+      "role": "Wealth - Citigold, Summer Analyst, Singapore, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Wealth---Citigold--Summer-Analyst--Singapore--2027_26988476",
+      "location": "Singapore  Singapore",
+      "detected": "2026-08-24T14:35:43.979721+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Hong-Kong--Hong-Kong/Wealth---Citigold--Summer-Analyst--Hong-Kong--2027_26988474",
+      "company": "Citigroup",
+      "role": "Wealth - Citigold, Summer Analyst, Hong Kong, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Hong-Kong--Hong-Kong/Wealth---Citigold--Summer-Analyst--Hong-Kong--2027_26988474",
+      "location": "Hong Kong  Hong Kong",
+      "detected": "2026-08-24T14:35:43.979721+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Singapore--Singapore/Wealth---Private-Bank--Summer-Analyst---Singapore--2027_26988484",
+      "company": "Citigroup",
+      "role": "Wealth - Private Bank, Summer Analyst,  Singapore, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Singapore--Singapore/Wealth---Private-Bank--Summer-Analyst---Singapore--2027_26988484",
+      "location": "Singapore  Singapore",
+      "detected": "2026-08-24T14:35:43.979721+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Hong-Kong--Hong-Kong/Wealth---Private-Bank--Summer-Analyst--Hong-Kong--2027_26988478",
+      "company": "Citigroup",
+      "role": "Wealth - Private Bank, Summer Analyst, Hong Kong, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Hong-Kong--Hong-Kong/Wealth---Private-Bank--Summer-Analyst--Hong-Kong--2027_26988478",
+      "location": "Hong Kong  Hong Kong",
+      "detected": "2026-08-24T14:35:43.979721+00:00",
+      "source": "workday"
     }
   ]
 }
