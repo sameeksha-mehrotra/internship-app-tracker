@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T14:38:27.181035+00:00",
+  "last_updated": "2026-08-26T14:37:48.935953+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -639,6 +639,26 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Hong-Kong--Hong-Kong/Wealth---Private-Bank--Summer-Analyst--Hong-Kong--2027_26988478",
       "location": "Hong Kong  Hong Kong",
       "detected": "2026-08-24T14:35:43.979721+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Mumbai-Maharashtra-India/Services---Summer-Analyst--India--2027_26980901",
+      "company": "Citigroup",
+      "role": "Services \u2013 Summer Analyst, India, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Mumbai-Maharashtra-India/Services---Summer-Analyst--India--2027_26980901",
+      "location": "Mumbai Maharashtra India",
+      "detected": "2026-08-26T14:37:48.935953+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Chiyoda-ku-Tokyo-Japan/Banking---Investment-Banking--Part-time-Intern--Tokyo-JPN--2027_26973462",
+      "company": "Citigroup",
+      "role": "Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Banking---Investment-Banking--Part-time-Intern--Tokyo-JPN--2027_26973462",
+      "location": "Chiyoda-ku Tokyo Japan",
+      "detected": "2026-08-26T14:37:48.935953+00:00",
       "source": "workday"
     }
   ]
