@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26T14:37:48.935953+00:00",
+  "last_updated": "2026-08-27T23:28:31.949841+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -659,6 +659,36 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Chiyoda-ku-Tokyo-Japan/Banking---Investment-Banking--Part-time-Intern--Tokyo-JPN--2027_26973462",
       "location": "Chiyoda-ku Tokyo Japan",
       "detected": "2026-08-26T14:37:48.935953+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Tampa---USA--2027_26990051",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Summer Analyst, Tampa - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Tampa---USA--2027_26990051",
+      "location": "Tampa Florida United States",
+      "detected": "2026-08-27T23:28:31.949841+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Irving---USA--2027_26990048",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Summer Analyst, Irving - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Irving---USA--2027_26990048",
+      "location": "Irving Texas United States",
+      "detected": "2026-08-27T23:28:31.949841+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Buffalo---USA--2027_26990039",
+      "company": "Citigroup",
+      "role": "Functions - Quantitative Risk Management, Summer Analyst, Buffalo - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Buffalo---USA--2027_26990039",
+      "location": "Getzville New York United States",
+      "detected": "2026-08-27T23:28:31.949841+00:00",
       "source": "workday"
     }
   ]
