@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27T23:28:31.949841+00:00",
+  "last_updated": "2026-08-28T23:21:49.932467+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -690,6 +690,16 @@
       "location": "Getzville New York United States",
       "detected": "2026-08-27T23:28:31.949841+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8750820002",
+      "company": "Databricks",
+      "role": "Sr. Legal Counsel, International Public Sector Compliance",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8750820002",
+      "location": "Ireland",
+      "detected": "2026-08-28T23:21:49.932467+00:00",
+      "source": "greenhouse"
     }
   ]
 }
