@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-29T17:28:08.918753+00:00",
+  "last_updated": "2026-08-30T17:52:02.716683+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -699,6 +699,16 @@
       "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8750820002",
       "location": "Ireland",
       "detected": "2026-08-28T23:21:49.932467+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8688875002",
+      "company": "Databricks",
+      "role": "SAP Consolidations Manager, International Accounting",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8688875002",
+      "location": "Bengaluru, India",
+      "detected": "2026-08-30T17:52:02.716683+00:00",
       "source": "greenhouse"
     }
   ]
