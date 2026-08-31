@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-30T17:52:02.716683+00:00",
+  "last_updated": "2026-08-31T19:47:57.845498+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -709,6 +709,26 @@
       "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8688875002",
       "location": "Bengaluru, India",
       "detected": "2026-08-30T17:52:02.716683+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Seoul--Korea-Republic-Of/Banking---Commercial-Banking--Summer-Analyst--Korea--Republic-of---APAC--2027_26985211",
+      "company": "Citigroup",
+      "role": "Banking - Commercial Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Seoul--Korea-Republic-Of/Banking---Commercial-Banking--Summer-Analyst--Korea--Republic-of---APAC--2027_26985211",
+      "location": "Seoul  Korea, Republic Of",
+      "detected": "2026-08-31T19:47:57.845498+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Databricks::8717004002",
+      "company": "Databricks",
+      "role": "International Accounts Payable Manager",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8717004002",
+      "location": "Bengaluru, India",
+      "detected": "2026-08-31T19:47:57.845498+00:00",
       "source": "greenhouse"
     }
   ]
