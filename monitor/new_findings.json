@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-01T17:31:57.298064+00:00",
+  "last_updated": "2026-09-02T17:33:09.736146+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -730,6 +730,36 @@
       "location": "Bengaluru, India",
       "detected": "2026-08-31T19:47:57.845498+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Getzville-New-York-United-States/Functions---Risk-Management--Summer-Analyst--Buffalo---USA--2027_26955711",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Summer Analyst, Buffalo - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Getzville-New-York-United-States/Functions---Risk-Management--Summer-Analyst--Buffalo---USA--2027_26955711",
+      "location": "Getzville New York United States",
+      "detected": "2026-09-02T17:33:09.736146+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Irving-Texas-United-States/Functions---Risk-Management--Summer-Analyst--Irving---USA--2027_26955971",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Summer Analyst, Irving - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Irving-Texas-United-States/Functions---Risk-Management--Summer-Analyst--Irving---USA--2027_26955971",
+      "location": "Irving Texas United States",
+      "detected": "2026-09-02T17:33:09.736146+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Tampa-Florida-United-States/Functions---Risk-Management--Summer-Analyst--Tampa---USA--2027_26955732",
+      "company": "Citigroup",
+      "role": "Functions - Risk Management, Summer Analyst, Tampa - USA, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Risk-Management--Summer-Analyst--Tampa---USA--2027_26955732",
+      "location": "Tampa Florida United States",
+      "detected": "2026-09-02T17:33:09.736146+00:00",
+      "source": "workday"
     }
   ]
 }
