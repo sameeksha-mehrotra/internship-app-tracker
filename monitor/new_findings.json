@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-08T17:41:55.582972+00:00",
+  "last_updated": "2026-09-09T17:28:48.556890+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -769,6 +769,16 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Tampa-Florida-United-States/Functions---Chief-Operating-Office--Summer-Analyst--Tampa---USA--2027_26990422",
       "location": "Tampa Florida United States",
       "detected": "2026-09-03T17:27:00.421997+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Los-Angeles-California-United-States/Banking---Commercial-Banking--Summer-Analyst--Los-Angeles---US--2027_26947566",
+      "company": "Citigroup",
+      "role": "Banking - Commercial Banking, Summer Analyst, Los Angeles - US, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Los-Angeles-California-United-States/Banking---Commercial-Banking--Summer-Analyst--Los-Angeles---US--2027_26947566",
+      "location": "Los Angeles California United States",
+      "detected": "2026-09-09T17:28:48.556890+00:00",
       "source": "workday"
     }
   ]
