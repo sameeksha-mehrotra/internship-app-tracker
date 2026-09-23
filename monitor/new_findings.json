@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T17:52:12.514157+00:00",
+  "last_updated": "2026-09-23T18:09:48.042272+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -819,6 +819,26 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/London--United-Kingdom/Banking--Commercial-Banking--Summer-Analyst--London---United-Kingdom-2027_26993448",
       "location": "London  United Kingdom",
       "detected": "2026-09-15T17:52:51.341938+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Warsaw--Poland/Internal-Audit---Summer-Analyst--Warsaw--2027_26991713",
+      "company": "Citigroup",
+      "role": "Internal Audit - Summer Analyst, Warsaw, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Warsaw--Poland/Internal-Audit---Summer-Analyst--Warsaw--2027_26991713",
+      "location": "Warsaw  Poland",
+      "detected": "2026-09-23T18:09:48.042272+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Stockholm--Sweden/Banking--Commercial-Banking--Summer-Analyst--Stockholm---Sweden-2027_26993619",
+      "company": "Citigroup",
+      "role": "Banking, Commercial Banking, Summer Analyst, Stockholm - Sweden 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Stockholm--Sweden/Banking--Commercial-Banking--Summer-Analyst--Stockholm---Sweden-2027_26993619",
+      "location": "Stockholm  Sweden",
+      "detected": "2026-09-23T18:09:48.042272+00:00",
       "source": "workday"
     }
   ]
