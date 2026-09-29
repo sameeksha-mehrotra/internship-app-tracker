@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-28T20:20:44.472273+00:00",
+  "last_run": "2026-09-29T19:04:24.101852+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "332ebabab3b25bc9a205dd913c246ee0e30e0e0887bfcc2d1730d624ca4a367b"
+      "hash": "22a3c382e3a830a987ce86646f94d630f461c7159f9004ef43bef38ac22ba450"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,7 +15,7 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "f0b25a3866f0a2cc5e8039b7151855d710bc420f2895fba7b0607a74c3361ae6"
+      "hash": "92bc3bcd8fc2e1ec8cde6a454ee6d165c0d0ef5c1591a345a25aea4c4700fbd8"
     },
     "PwC Strategy&": {
       "seen_ids": [],
@@ -23,27 +23,27 @@
     },
     "KPMG Advisory": {
       "seen_ids": [],
-      "hash": "c5dfb02c4ef8d2a38420c5491dac3123a7d6892f58cdb71a21804d8046a4261d"
+      "hash": "9297f1d399204846c6335b39451aab262dc480a62fc6264b67e73243b33ee5e3"
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "f8062605947423c5a67bece8bf02685405defd73bc1d17b6ee6e0ede3cae3aeb"
+      "hash": "5f646962caa303237e68dbd84c2b27de6e659ca72e3119e0b9d4399fef97b55a"
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "9178c44fde1b69165ddbc3194e516fb88a17c069b01d3119ee3f56a371849ca6"
+      "hash": "4a9df044621e74e27834467d3238b12f39c3823860c7b7b4dc00ba1b214ac02f"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "dcf7a5b5194342f1a96a08c4b60ad0884e11d622e6dce838c2ee8abd19c7f540"
+      "hash": "5c0ca7b348eb141483c70f2a1857fd0ff33bce178ffb49c1ecd071b566641cd5"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "db9a14423d342aad5f25c0c79cca8951c650c0d59453da9dae27f61d57b601d2"
+      "hash": "a66121d38d3dd02a6be97a68c0ab3501d61d2a2aaa844d3351e1a50463dca05e"
     },
     "Goldman Sachs": {
       "seen_ids": [],
-      "hash": "604132027ab3ac0e2d06e4ab49fef6c552558d9244bfa652e46297f59f2568a6"
+      "hash": "d95a6d06c52a2b9cec53fedb1e1f06029a02920ef4d34be7562dbee391288b25"
     },
     "JPMorgan": {
       "seen_ids": [],
@@ -55,98 +55,98 @@
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "02243051c1a1661e5aec2427cb15d750d22d68fe6672465287e1e25679f9b964"
+      "hash": "7ccc290e4e5ffd59e18930b6fe87337621d7868a17ed60b747bf5f90b005400a"
     },
     "Citigroup": {
       "seen_ids": [
-        "/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
-        "/job/Irving-Texas-United-States/Functions---Risk-Management--Summer-Analyst--Irving---USA--2027_26955971",
-        "/job/Milan-Milano-Italy/Banking--Commercial-Banking--Summer-Analyst--Milan---Italy-2027_26993595",
-        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
-        "/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
-        "/job/Warsaw--Poland/Internal-Audit---Summer-Analyst--Warsaw--2027_26991713",
+        "/job/THE-SUMMIT---CIUDAD-DE-MEXICO/Markets---Sales-and-Trading--Internship--Mexico-City--Mexico-2027_26983640",
+        "/job/TAURUS/Banking--Commercial-Banking--Summer-Analyst--Frankfurt---Germany-2027_26993561",
+        "/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981350",
+        "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Analyst--New-York---USA--2027_26978721",
         "/job/Getzville-New-York-United-States/Functions---Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981024",
-        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
-        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
-        "/job/Chiyoda-ku-Tokyo-Japan/Banking---Investment-Banking--Part-time-Intern--Tokyo-JPN--2027_26973462",
-        "/job/Singapore--Singapore/Services---Summer-Analyst--Singapore--2027_26978591",
-        "/job/Toronto---Canada/Services--Full-Time-Analyst--Toronto---CA--2027_26975984",
-        "/job/Milan-Milano-Italy/Markets---Sales--Trading---Structuring--Off-Cycle-Internship--Milan--Italy--2026_26980265",
-        "/job/Tampa-Florida-United-States/Functions---Internal-Audit--Full-Time-Analyst--Tampa---USA--2027_26983267",
+        "/job/Hong-Kong--Hong-Kong/Wealth---Private-Bank--Summer-Analyst--Hong-Kong--2027_26988478",
+        "/job/Kowloon--Hong-Kong/Banking---Commercial-Banking--Summer-Analyst--Hong-Kong---APAC--2027_26985455",
+        "/job/Warsaw--Poland/Internal-Audit---Summer-Analyst--Warsaw--2027_26991713",
         "/job/New-York-New-York-United-States/Banking---Corporate-Banking--Full-Time-Analyst--New-York---USA--2027_26978394",
+        "/job/Singapore--Singapore/Markets---Sales-and-Trading--Summer-Analyst--Singapore---2027_26978287",
+        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
+        "/job/Chiyoda-ku-Tokyo-Japan/Operations--Markets-Operations-Fulltime-Analyst---Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26980865",
+        "/job/Hong-Kong--Hong-Kong/Services---Summer-Analyst--Hong-Kong--2027_26978589",
+        "/job/Irving-Texas-United-States/Functions---Internal-Audit--Summer-Analyst--Dallas---USA--2027_26951372",
+        "/job/Singapore--Singapore/Banking---Corporate-Banking--Summer-Analyst--Singapore---APAC--2027_26984370",
+        "/job/Singapore--Singapore/Banking---Commercial-Banking--Summer-Analyst--Singapore---APAC--2027_26985457",
+        "/job/Shanghai-Shanghai-China/Banking---Corporate-Banking--Summer-Analyst--China---APAC--2027_26983683",
+        "/job/New-York-New-York-United-States/Banking---Financial-Strategy-Group--Full-Time-Analyst--New-York---USA--2027_26979062",
+        "/job/Getzville-New-York-United-States/Functions---Risk-Management--Summer-Analyst--Buffalo---USA--2027_26955711",
+        "/job/Singapore--Singapore/Banking---Investment-Banking--Summer-Analyst--Singapore---APAC--2027_26984373",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
+        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
+        "/job/Los-Angeles-California-United-States/Banking---Commercial-Banking--Summer-Analyst--Los-Angeles---US--2027_26947566",
+        "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Associate--New-York-City---US-2027_26979362",
+        "/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
+        "/job/Chicago-Illinois-United-States/Banking---Corporate-Banking--Full-Time-Analyst--Chicago---USA--2027_26978398",
+        "/job/Bogota--Colombia/Banking---Corporate-Baking--Internship--Bogot---Colombia--2026_25909660",
+        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
+        "/job/Seoul--Korea-Republic-Of/Banking---Commercial-Banking--Summer-Analyst--Korea--Republic-of---APAC--2027_26985211",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Summer-Analyst---Mississauga--ON-2027_26951380",
+        "/job/Stockholm--Sweden/Banking--Commercial-Banking--Summer-Analyst--Stockholm---Sweden-2027_26993619",
+        "/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Tampa---USA--2027_26990051",
+        "/job/New-York-New-York-United-States/Functions---Internal-Audit--Summer-Analyst--New-York---USA--2027_26951374",
+        "/job/Taipei-Taipei-City-Taiwan/Banking---Commercial-Banking--Summer-Analyst--Taiwan---APAC--2027_26985506",
+        "/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
+        "/job/Tampa-Florida-United-States/Functions---Internal-Audit--Summer-Analyst--Tampa---USA--2027_26951376",
+        "/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981044",
+        "/job/Tampa-Florida-United-States/Functions---Internal-Audit--Full-Time-Analyst--Tampa---USA--2027_26983267",
+        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
+        "/job/Shanghai-Shanghai-China/Banking---Commercial-Banking--Summer-Analyst--China---APAC--2027_26983682",
+        "/job/Milan-Milano-Italy/Banking--Commercial-Banking--Summer-Analyst--Milan---Italy-2027_26993595",
+        "/job/San-Francisco-California-United-States/Banking---Corporate-Banking--Full-Time-Analyst--San-Francisco---USA--2027_26978406",
+        "/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
+        "/job/Mumbai-Maharashtra-India/Services---Summer-Analyst--India--2027_26980901",
+        "/job/Toronto---Canada/Banking---Investment-Banking--Full-Time-Analyst--Toronto---CAN--2027_26979068",
+        "/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
         "/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Irving---USA--2027_26990048",
         "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Associate--New-York-City---US-2027_26979364",
-        "/job/Seoul--Korea-Republic-Of/Banking---Commercial-Banking--Summer-Analyst--Korea--Republic-of---APAC--2027_26985211",
-        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Full-Time-Analyst--New-York---USA--2027_26979638",
-        "/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Tampa---USA--2027_26990051",
-        "/job/Tampa-Florida-United-States/Functions---Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981345",
-        "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
-        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Summer-Analyst--New-York-City---US--2027_25928736",
-        "/job/San-Francisco-California-United-States/Banking---Corporate-Banking--Full-Time-Analyst--San-Francisco---USA--2027_26978406",
-        "/job/Chicago-Illinois-United-States/Banking---Corporate-Banking--Full-Time-Analyst--Chicago---USA--2027_26978398",
+        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
+        "/job/New-York-New-York-United-States/Functions---Internal-Audit--Full-Time-Analyst--New-York---USA--2027_26983265",
+        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
+        "/job/Singapore--Singapore/Wealth---Citigold--Summer-Analyst--Singapore--2027_26988476",
         "/job/Quebec-Canada/Analyste-d-t-2027--Financement-des-grandes-entreprises---Montral---Canada-Corporate-Banking--2027-Summer-Analyst---Montreal--Corporates-_26950063",
-        "/job/Shanghai-Shanghai-China/Banking---Corporate-Banking--Summer-Analyst--China---APAC--2027_26983683",
-        "/job/Budapest--Hungary/Technology---Cybersecurity--Summer-Analyst--Budapest--2026_25921949",
-        "/job/TAURUS/Banking--Commercial-Banking--Summer-Analyst--Frankfurt---Germany-2027_26993561",
-        "/job/Irving-Texas-United-States/Functions---Internal-Audit--Summer-Analyst--Dallas---USA--2027_26951372",
-        "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Associate--New-York-City---US-2027_26979362",
-        "/job/Los-Angeles-California-United-States/Banking---Commercial-Banking--Summer-Analyst--Los-Angeles---US--2027_26947566",
-        "/job/New-York-New-York-United-States/Functions---Internal-Audit--Summer-Analyst--New-York---USA--2027_26951374",
         "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Full-Time-Analyst--New-York---USA--2027_26978780",
-        "/job/Singapore--Singapore/Banking---Corporate-Banking--Summer-Analyst--Singapore---APAC--2027_26984370",
-        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Full-Time-Analyst--Mississauga---ON--2027_26983269",
-        "/job/Tampa-Florida-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981350",
-        "/job/Singapore--Singapore/Markets---Sales-and-Trading--Summer-Analyst--Singapore---2027_26978287",
-        "/job/Hong-Kong--Hong-Kong/Wealth---Private-Bank--Summer-Analyst--Hong-Kong--2027_26988478",
-        "/job/London--United-Kingdom/Banking--Commercial-Banking--Summer-Analyst--London---United-Kingdom-2027_26993448",
-        "/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981034",
-        "/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
-        "/job/Boston-Massachusetts-United-States/Banking--Investment-Banking--Full-Time-Analyst--Boston-Technology-Software----USA--2027_26978172",
-        "/job/Shanghai-Shanghai-China/Services---Summer-Analyst--China--2027_26978889",
-        "/job/Chiyoda-ku-Tokyo-Japan/Operations--Markets-Operations-Fulltime-Analyst---Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26980865",
-        "/job/Taipei-Taipei-City-Taiwan/Banking---Commercial-Banking--Summer-Analyst--Taiwan---APAC--2027_26985506",
-        "/job/Kowloon--Hong-Kong/Banking---Commercial-Banking--Summer-Analyst--Hong-Kong---APAC--2027_26985455",
-        "/job/Irving-Texas-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981044",
-        "/job/Toronto---Canada/Banking---Corporate-Banking-Corporates--Full-Time-Analyst--Toronto---CAN--2027_26979071",
-        "/job/Tampa-Florida-United-States/Functions---Risk-Management--Summer-Analyst--Tampa---USA--2027_26955732",
         "/job/Irving-Texas-United-States/Functions---Internal-Audit--Full-Time-Analyst--Dallas---USA--2027_26983260",
-        "/job/Hong-Kong--Hong-Kong/Wealth---Citigold--Summer-Analyst--Hong-Kong--2027_26988474",
-        "/job/Mumbai-Maharashtra-India/Services---Summer-Analyst--India--2027_26980901",
         "/job/Chiyoda-ku-Tokyo-Japan/Corporate-Banking---Summer-Internship-Program--Tokyo---Japan--2027_26982664",
-        "/job/THE-SUMMIT---CIUDAD-DE-MEXICO/Markets---Sales-and-Trading--Internship--Mexico-City--Mexico-2027_26983640",
+        "/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
+        "/job/New-York-New-York-United-States/Banking---Investment-Banking--Full-Time-Analyst--New-York-City---US-2027_26978150",
+        "/job/Budapest--Hungary/Technology---Infrastructure--Summer-Analyst--Hungary---Budapest--2026_25921946",
+        "/job/Singapore--Singapore/Services---Summer-Analyst--Singapore--2027_26978591",
+        "/job/Tampa-Florida-United-States/Functions---Risk-Management--Summer-Analyst--Tampa---USA--2027_26955732",
+        "/job/Irving-Texas-United-States/Functions---Risk-Management--Summer-Analyst--Irving---USA--2027_26955971",
+        "/job/Milan-Milano-Italy/Markets---Sales--Trading---Structuring--Off-Cycle-Internship--Milan--Italy--2026_26980265",
         "/job/Singapore--Singapore/Wealth---Private-Bank--Summer-Analyst---Singapore--2027_26988484",
+        "/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
+        "/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Full-Time-Analyst--Buffalo---USA--2027_26981034",
+        "/job/Chiyoda-ku-Tokyo-Japan/Banking---Investment-Banking--Part-time-Intern--Tokyo-JPN--2027_26973462",
+        "/job/London--United-Kingdom/Banking--Commercial-Banking--Summer-Analyst--London---United-Kingdom-2027_26993448",
+        "/job/Tampa-Florida-United-States/Functions---Risk-Management--Full-Time-Analyst--Tampa---USA--2027_26981345",
+        "/job/Hong-Kong--Hong-Kong/Wealth---Citigold--Summer-Analyst--Hong-Kong--2027_26988474",
         "/job/Getzville-New-York-United-States/Functions---Quantitative-Risk-Management--Summer-Analyst--Buffalo---USA--2027_26990039",
-        "/job/Sao-Paulo-Sao-Paulo-Brazil/Banking---Corporate-Banking--Internship--So-Paulo---Brazil--2026_26948506",
-        "/job/Toronto---Canada/Banking---Investment-Banking--Full-Time-Analyst--Toronto---CAN--2027_26979068",
+        "/job/Tampa-Florida-United-States/Functions---Chief-Operating-Office--Summer-Analyst--Tampa---USA--2027_26990422",
+        "/job/Chicago-Illinois-United-States/Banking---Investment-Banking--Full-Time-Analyst--Chicago---USA--2027_26978704",
+        "/job/Shanghai-Shanghai-China/Services---Summer-Analyst--China--2027_26978889",
+        "/job/Irving-Texas-United-States/Functions---Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981043",
         "/job/Chiyoda-ku-Tokyo-Japan/Investment-Banking---Summer-Internship-Program--Tokyo---Japan--2027_26982662",
         "/job/Houston-Texas-United-States/Banking---Commercial-Banking--Summer-Analyst--Houston---US--2027_25926681",
-        "/job/Hong-Kong--Hong-Kong/Services---Summer-Analyst--Hong-Kong--2027_26978589",
-        "/job/Chiyoda-ku-Tokyo-Japan/Research--Part-time-Intern--Tokyo-JPN--2027_26972803",
-        "/job/Quebec-Canada/NAM-Canada-Corporate-Banking--2027-Full-Time-Analyst--Montreal--Corporates--Services-bancaires-aux-entreprises--Amrique-du-Nord-Canada--Analyste--temps-plein--programme-2027--Montral--entreprises-_26979074",
-        "/job/New-York-New-York-United-States/Banking---Capital-Markets-LatAm--Full-Time-Analyst--New-York-City---US--2027_26978723",
-        "/job/Singapore--Singapore/Wealth---Citigold--Summer-Analyst--Singapore--2027_26988476",
-        "/job/Houston-Texas-United-States/Banking---Investment-Banking--Full-Time-Analyst--Houston---US-2027_26978694",
-        "/job/Irving-Texas-United-States/Functions---Risk-Management--Full-Time-Analyst--Irving---USA--2027_26981043",
-        "/job/Tampa-Florida-United-States/Functions---Chief-Operating-Office--Summer-Analyst--Tampa---USA--2027_26990422",
-        "/job/Hong-Kong--Hong-Kong/Markets---Sales-and-Trading--Summer-Analyst--Hong-Kong---2027_26978275",
-        "/job/Singapore--Singapore/Banking---Commercial-Banking--Summer-Analyst--Singapore---APAC--2027_26985457",
-        "/job/Getzville-New-York-United-States/Functions---Risk-Management--Summer-Analyst--Buffalo---USA--2027_26955711",
-        "/job/Tampa-Florida-United-States/Functions---Internal-Audit--Summer-Analyst--Tampa---USA--2027_26951376",
-        "/job/Shanghai-Shanghai-China/Banking---Commercial-Banking--Summer-Analyst--China---APAC--2027_26983682",
-        "/job/New-York-New-York-United-States/Banking---Capital-Markets--Full-Time-Analyst--New-York---USA--2027_26978721",
-        "/job/New-York-New-York-United-States/Services--Full-Time-Analyst--New-York-City---US--2027_26975983",
-        "/job/New-York-New-York-United-States/Services---Summer-Analyst-Program--New-York-City---US--2027_26945311",
-        "/job/Chiyoda-ku-Tokyo-Japan/Markets---Summer-Internship-Program--Boston-Career-Forum-in-2026--Tokyo---Japan--2027_26976914",
+        "/job/Toronto---Canada/Services--Full-Time-Analyst--Toronto---CA--2027_26975984",
+        "/job/Mississauga-Ontario-Canada/Functions---Internal-Audit--Full-Time-Analyst--Mississauga---ON--2027_26983269",
+        "/job/New-York-New-York-United-States/Markets---Sales-and-Trading--Full-Time-Analyst--New-York---USA--2027_26979638",
         "/job/Los-Angeles-California-United-States/Banking--Investment-Banking--Full-Time-Analyst--Los-Angeles---USA--2027_26978170",
-        "/job/New-York-New-York-United-States/Functions---Internal-Audit--Full-Time-Analyst--New-York---USA--2027_26983265",
-        "/job/Singapore--Singapore/Banking---Investment-Banking--Summer-Analyst--Singapore---APAC--2027_26984373",
-        "/job/Stockholm--Sweden/Banking--Commercial-Banking--Summer-Analyst--Stockholm---Sweden-2027_26993619"
+        "/job/Hong-Kong--Hong-Kong/Markets---Sales-and-Trading--Summer-Analyst--Hong-Kong---2027_26978275"
       ],
       "hash": null
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "a8957a1e772f9e7e43ad8042797dc57c3e1d04bcb3076c354979fca8eff11414"
+      "hash": "33e3d3e053dd97a899a1841a52bb858a5d916e4123ac8ee8f9fc1f880c5de942"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -162,7 +162,7 @@
     },
     "Blackstone": {
       "seen_ids": [],
-      "hash": "3ae624616dc5bd006f049827db0e02ee7128a7ed1ffd6fdce2a462ea8634f841"
+      "hash": "2e9f6cd043c867f2ac79c53259cd57e6ad90674b1c5aca597850b9261d038b73"
     },
     "KKR": {
       "seen_ids": [],
@@ -174,7 +174,7 @@
     },
     "Point72": {
       "seen_ids": [],
-      "hash": "d72d5e725b377428fb0cf5bc212548a8d585e6dba068bf968e7c4e5de4437bd0"
+      "hash": "e5d638c9489a2aa7a711e4fe3e27bc34ded9b3905742315ea68c0cd2962e2795"
     },
     "Jane Street": {
       "seen_ids": [],
@@ -186,11 +186,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "d767c20c16bf090a2faf1793dbcb8639f4d3480e836d68321b8872d4c7e98231"
+      "hash": "042c920ff77558e9715b850693628a89c9e3338afa7369e5ece9b28e3fc0ae6f"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "bcafc5314c5a73138d8d4fe4317b31b89b9cc11367fc4682201005f42f7c4f9c"
+      "hash": "0cdcbf974ffea129040bc847237dba6970f690a29076304e66751b47961b7bd8"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -198,29 +198,29 @@
     },
     "Databricks": {
       "seen_ids": [
+        "6544386002",
+        "8012818002",
         "8012658002",
+        "6883068002",
         "7586263002",
+        "8337425002",
+        "7011263002",
+        "5646866002",
+        "8750820002",
         "8717004002",
         "8459026002",
         "8688875002",
-        "8732364002",
-        "6883068002",
-        "8750820002",
-        "6544386002",
-        "5646866002",
-        "8012818002",
-        "8337425002",
-        "7011263002"
+        "8732364002"
       ],
       "hash": null
     },
     "Cohere": {
       "seen_ids": [],
-      "hash": "4e8d7dd9044295196a1417b8063dc288aff0b44408d2774c057d1b207152357f"
+      "hash": "05ab5485e7c6516be1562149160b1d61dd6a810d3525750e79ee6302e991124b"
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "019d0cbbfe62ced303338995bb5cefdf5b428d39270dfeba8886abd92420c7f4"
+      "hash": "2b01a456e05cf094482c980745675720fcd31c62b9c44171a9b5e2e1778875be"
     }
   }
 }
