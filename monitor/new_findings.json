@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30T18:45:23.843158+00:00",
+  "last_updated": "2026-10-01T19:12:10.937871+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -839,6 +839,16 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Stockholm--Sweden/Banking--Commercial-Banking--Summer-Analyst--Stockholm---Sweden-2027_26993619",
       "location": "Stockholm  Sweden",
       "detected": "2026-09-23T18:09:48.042272+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Warsaw--Poland/Technology---Infrastructure--Summer-Analyst--Warsaw-2027_26999106",
+      "company": "Citigroup",
+      "role": "Technology - Infrastructure, Summer Analyst, Warsaw 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Warsaw--Poland/Technology---Infrastructure--Summer-Analyst--Warsaw-2027_26999106",
+      "location": "Warsaw  Poland",
+      "detected": "2026-10-01T19:12:10.937871+00:00",
       "source": "workday"
     }
   ]
