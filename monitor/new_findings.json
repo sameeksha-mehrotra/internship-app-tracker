@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-01T19:12:10.937871+00:00",
+  "last_updated": "2026-10-02T18:53:43.109672+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -850,6 +850,86 @@
       "location": "Warsaw  Poland",
       "detected": "2026-10-01T19:12:10.937871+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8133715002",
+      "company": "Databricks",
+      "role": "Product Management Intern (2026) - Amsterdam",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8133715002",
+      "location": "Amsterdam, Netherlands",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8863328002",
+      "company": "Databricks",
+      "role": "Product Management Intern (2026) - Belgrade",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8863328002",
+      "location": "Belgrade, Serbia",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8145776002",
+      "company": "Databricks",
+      "role": "Product Management Intern (2026) - Berlin",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8145776002",
+      "location": "Berlin, Germany",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8133710002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - Aarhus",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8133710002",
+      "location": "Aarhus, Denmark",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::6866534002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - Amsterdam",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6866534002",
+      "location": "Amsterdam, Netherlands",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::7640764002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - Belgrade",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=7640764002",
+      "location": "Belgrade, Serbia",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::6866531002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - Berlin",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6866531002",
+      "location": "Berlin, Germany",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8847738002",
+      "company": "Databricks",
+      "role": "Software Engineering Intern (2027 Start) - London",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8847738002",
+      "location": "London, United Kingdom",
+      "detected": "2026-10-02T18:53:43.109672+00:00",
+      "source": "greenhouse"
     }
   ]
 }
