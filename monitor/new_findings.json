@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T19:16:16.864332+00:00",
+  "last_updated": "2026-10-07T19:40:35.557733+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -930,6 +930,16 @@
       "location": "London, United Kingdom",
       "detected": "2026-10-02T18:53:43.109672+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Belfast--United-Kingdom/Chief-Operating-Office---Summer-Analyst--UK---Belfast--2027_26997955",
+      "company": "Citigroup",
+      "role": "Chief Operating Office - Summer Analyst, UK - Belfast, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Belfast--United-Kingdom/Chief-Operating-Office---Summer-Analyst--UK---Belfast--2027_26997955",
+      "location": "Belfast  United Kingdom",
+      "detected": "2026-10-07T19:40:35.557733+00:00",
+      "source": "workday"
     }
   ]
 }
