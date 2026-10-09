@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08T19:37:07.868099+00:00",
+  "last_updated": "2026-10-09T19:11:39.283003+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -940,6 +940,36 @@
       "location": "Belfast  United Kingdom",
       "detected": "2026-10-07T19:40:35.557733+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8133727002",
+      "company": "Databricks",
+      "role": "Product Manager, New Grad (2027) - Amsterdam",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8133727002",
+      "location": "Amsterdam, Netherlands",
+      "detected": "2026-10-09T19:11:39.283003+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8863326002",
+      "company": "Databricks",
+      "role": "Product Manager, New Grad (2027) - Belgrade",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8863326002",
+      "location": "Belgrade, Serbia",
+      "detected": "2026-10-09T19:11:39.283003+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8145800002",
+      "company": "Databricks",
+      "role": "Product Manager, New Grad (2027) - Berlin",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8145800002",
+      "location": "Berlin, Germany",
+      "detected": "2026-10-09T19:11:39.283003+00:00",
+      "source": "greenhouse"
     }
   ]
 }
