@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-09T19:11:39.283003+00:00",
+  "last_updated": "2026-10-10T18:10:40.614730+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -969,6 +969,26 @@
       "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8145800002",
       "location": "Berlin, Germany",
       "detected": "2026-10-09T19:11:39.283003+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8787352002",
+      "company": "Databricks",
+      "role": "Product Design Intern (2027 Start)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8787352002",
+      "location": "San Francisco, California; Seattle, Washington",
+      "detected": "2026-10-10T18:10:40.614730+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8843577002",
+      "company": "Databricks",
+      "role": "Product Design New Grad (2027 Start)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8843577002",
+      "location": "San Francisco, California; Seattle, Washington",
+      "detected": "2026-10-10T18:10:40.614730+00:00",
       "source": "greenhouse"
     }
   ]
