@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-15T17:57:06.649740+00:00",
+  "last_updated": "2026-10-16T17:46:16.668247+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -1010,6 +1010,16 @@
       "location": "Bellevue, Washington; Mountain View, California; San Francisco, California; Vancouver, Canada",
       "detected": "2026-10-12T21:56:49.254026+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Warsaw--Poland/Technology---Cyber-Security--Summer-Analyst--Warsaw-2027_26999062",
+      "company": "Citigroup",
+      "role": "Technology - Cyber Security, Summer Analyst, Warsaw 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Warsaw--Poland/Technology---Cyber-Security--Summer-Analyst--Warsaw-2027_26999062",
+      "location": "Warsaw  Poland",
+      "detected": "2026-10-16T17:46:16.668247+00:00",
+      "source": "workday"
     }
   ]
 }
