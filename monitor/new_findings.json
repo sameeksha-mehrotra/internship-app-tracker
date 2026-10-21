@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T18:14:52.727674+00:00",
+  "last_updated": "2026-10-21T18:19:43.652569+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -1019,6 +1019,26 @@
       "url": "https://citi.wd5.myworkdayjobs.com/job/Warsaw--Poland/Technology---Cyber-Security--Summer-Analyst--Warsaw-2027_26999062",
       "location": "Warsaw  Poland",
       "detected": "2026-10-16T17:46:16.668247+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/London--United-Kingdom/Functions---Internal-Audit--Summer-Analyst---London--2027_261002816",
+      "company": "Citigroup",
+      "role": "Functions - Internal Audit, Summer Analyst - London, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/London--United-Kingdom/Functions---Internal-Audit--Summer-Analyst---London--2027_261002816",
+      "location": "London  United Kingdom",
+      "detected": "2026-10-21T18:19:43.652569+00:00",
+      "source": "workday"
+    },
+    {
+      "id": "Citigroup::/job/Taguig--Philippines/Technology---Infrastructure--Summer-Analyst--Internship---Philippines--2027_261002885",
+      "company": "Citigroup",
+      "role": "Technology - Infrastructure, Summer Analyst (Internship), Philippines, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Taguig--Philippines/Technology---Infrastructure--Summer-Analyst--Internship---Philippines--2027_261002885",
+      "location": "Taguig  Philippines",
+      "detected": "2026-10-21T18:19:43.652569+00:00",
       "source": "workday"
     }
   ]
