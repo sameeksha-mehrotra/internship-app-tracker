@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27T19:10:52.861989+00:00",
+  "last_updated": "2026-10-28T19:15:04.092742+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -1059,6 +1059,26 @@
       "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6866538002",
       "location": "Mountain View, California; San Francisco, California",
       "detected": "2026-10-23T18:03:05.829387+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::6865698002",
+      "company": "Databricks",
+      "role": "Software Engineer - New Grad (2027 Start)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6865698002",
+      "location": "Bellevue, Washington; Mountain View, California; San Francisco, California; Vancouver, Canada",
+      "detected": "2026-10-28T19:15:04.092742+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::6865704002",
+      "company": "Databricks",
+      "role": "Software Engineer - New Grad, Distributed Data Systems (2027 Start)",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6865704002",
+      "location": "Bellevue, Washington; Mountain View, California",
+      "detected": "2026-10-28T19:15:04.092742+00:00",
       "source": "greenhouse"
     }
   ]
