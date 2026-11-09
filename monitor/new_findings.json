@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-08T18:36:38.648339+00:00",
+  "last_updated": "2026-11-09T23:14:50.076760+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -1130,6 +1130,16 @@
       "location": "London, United Kingdom",
       "detected": "2026-11-02T22:32:57.823312+00:00",
       "source": "greenhouse"
+    },
+    {
+      "id": "Citigroup::/job/Belfast--United-Kingdom/Human-Resources---Summer-Analyst--United-Kingdom---Belfast--2027_261006361",
+      "company": "Citigroup",
+      "role": "Human Resources - Summer Analyst, United Kingdom - Belfast, 2027",
+      "track": 5,
+      "url": "https://citi.wd5.myworkdayjobs.com/job/Belfast--United-Kingdom/Human-Resources---Summer-Analyst--United-Kingdom---Belfast--2027_261006361",
+      "location": "Belfast  United Kingdom",
+      "detected": "2026-11-09T23:14:50.076760+00:00",
+      "source": "workday"
     }
   ]
 }
