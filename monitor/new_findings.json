@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-24T01:26:35.223726+00:00",
+  "last_updated": "2026-11-24T23:20:55.845782+00:00",
   "findings": [
     {
       "id": "Citigroup::/job/New-York-New-York-United-States/Markets---Quantitative-Analysis--Summer-Analyst---New-York-City---US--2027_25928747",
@@ -1160,6 +1160,26 @@
       "location": "Mumbai Maharashtra India",
       "detected": "2026-11-12T21:15:57.978497+00:00",
       "source": "workday"
+    },
+    {
+      "id": "Databricks::8627551002",
+      "company": "Databricks",
+      "role": "Sr Compensation Manager, International",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8627551002",
+      "location": "London, United Kingdom",
+      "detected": "2026-11-24T23:20:55.845782+00:00",
+      "source": "greenhouse"
+    },
+    {
+      "id": "Databricks::8959902002",
+      "company": "Databricks",
+      "role": "Sr. Legal Counsel, International Public Sector Compliance",
+      "track": 1,
+      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8959902002",
+      "location": "London, United Kingdom",
+      "detected": "2026-11-24T23:20:55.845782+00:00",
+      "source": "greenhouse"
     }
   ]
 }

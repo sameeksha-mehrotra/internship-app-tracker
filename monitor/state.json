@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-24T01:26:35.223726+00:00",
+  "last_run": "2026-11-24T23:20:55.845782+00:00",
   "companies": {
     "McKinsey & Company": {
       "seen_ids": [],
@@ -7,7 +7,7 @@
     },
     "BCG": {
       "seen_ids": [],
-      "hash": "82db7991a4001e6816831d850ed2a5d8a92922637dd0f68cceba8961e785dc3a"
+      "hash": "92f325cbe9347d90c135991188e2d36bdad4d8f026c9c3f3c7162f37c9d38fbb"
     },
     "Bain & Company": {
       "seen_ids": [],
@@ -15,7 +15,7 @@
     },
     "Deloitte": {
       "seen_ids": [],
-      "hash": "dd21d79abc97ff0eda03f81ad7cb43d813b42124808aa763e236c964d546b43c"
+      "hash": "e884f5c09e908dcb6e8bfdb8ddc2ac9b3415c5a7af064d2240b31104d8308d74"
     },
     "PwC Strategy&": {
       "seen_ids": [],
@@ -23,23 +23,23 @@
     },
     "KPMG Advisory": {
       "seen_ids": [],
-      "hash": "7c60fe80a695dbf65c830c663617f6651b901f534effaac32bf3b730a240caa7"
+      "hash": "de1647f69f31a6d279e5a1f3e3b1f9ae2d2aea3f388eed1c13f7420730af4a39"
     },
     "EY-Parthenon": {
       "seen_ids": [],
-      "hash": "3ce2bc42b9f9953389b79df02e0bb23b9aa9aa221646c4725ab380069d76c66b"
+      "hash": "17b90fdad86c5da6eef3c34916237e079d7eeede42e210402ac1f1b891f33250"
     },
     "Oliver Wyman": {
       "seen_ids": [],
-      "hash": "d2b574700bc355bf957e5cceed4584dea802ecf6b73d8441a14feb8cd09379f5"
+      "hash": "9c047a105ce979281146de7f0b86a26a9ad54c1221e3a07f13c861335d9ecf45"
     },
     "LEK Consulting": {
       "seen_ids": [],
-      "hash": "3e1170b24cbbb3c9c093b003bb6f67157fd5341fc722e12181ae5847e7815042"
+      "hash": "86b123a60ce35c6e07acbce61c03645e537061fcc8a1c450af37479c50889d9e"
     },
     "Accenture Strategy": {
       "seen_ids": [],
-      "hash": "217ac7fc127882b82747b0f8276c01e7d17cc8efa2837c10ef14dd1ba0656cec"
+      "hash": "5f84fac92cec7990b2ab7c69e6ce5e5e255434cc9668968aeb92e428cd944a36"
     },
     "Goldman Sachs": {
       "seen_ids": [],
@@ -55,7 +55,7 @@
     },
     "Bank of America": {
       "seen_ids": [],
-      "hash": "3ba67fb3d70e6f10577e9b8c5ea26a2120a883d5d67fc1e2306534fc8acfbad0"
+      "hash": "552e17cab5ea639d326c9d1691f878a0d77042149d3cefaee805657ccf3a7f3f"
     },
     "Citigroup": {
       "seen_ids": [
@@ -156,7 +156,7 @@
     },
     "Barclays": {
       "seen_ids": [],
-      "hash": "7b8334a802a3402d48b2580540678dffa4108a2b1aab57bad1026804b4b3eb39"
+      "hash": "9c5310777d9ba4fa1b148ac0fa9e9bf24a4acfcde962f32a40c50c042af1a4f7"
     },
     "Deutsche Bank": {
       "seen_ids": [],
@@ -176,7 +176,7 @@
     },
     "KKR": {
       "seen_ids": [],
-      "hash": "499231d4d33b8fc19cab276357f72c469d472717700e77f78b143b8cd65ef410"
+      "hash": "6502247e51791a0388aa98614880dac21df5f3fe386ca97907d2ce168f98d9fb"
     },
     "Citadel": {
       "seen_ids": [],
@@ -196,11 +196,11 @@
     },
     "Fidelity": {
       "seen_ids": [],
-      "hash": "4ce5f0d08d47acafac87acd14304d9491b2676ee49214cbb7670d7f80bfb51ca"
+      "hash": "3f876fdb160d02241ac0cb0a5d05d3588bbf31f051c987328b7823529b53f636"
     },
     "Google (BOLD / gTech)": {
       "seen_ids": [],
-      "hash": "e428ffcfba3b1e924380eb61e32bba12436a28e93ffc62a3a16fecb4c55a711d"
+      "hash": "770619db267d14cf79aafb2416b66ad4e5a091afe76c7ca44666d96a3cf29ccf"
     },
     "Salesforce": {
       "seen_ids": [],
@@ -208,41 +208,43 @@
     },
     "Databricks": {
       "seen_ids": [
-        "8337425002",
-        "6883068002",
-        "7586263002",
-        "8717004002",
-        "8133710002",
-        "5646866002",
-        "8688875002",
-        "8133727002",
         "7640764002",
-        "8145800002",
-        "6866549002",
-        "6886281002",
-        "7640776002",
-        "8787352002",
-        "6865704002",
-        "6866531002",
-        "8012818002",
-        "8133691002",
-        "7011263002",
-        "8843577002",
-        "8847738002",
         "6865698002",
-        "6866538002",
+        "6883068002",
+        "7011263002",
+        "8627551002",
+        "7640776002",
+        "8688875002",
+        "8012818002",
+        "8459026002",
+        "8133727002",
         "8145776002",
+        "8133710002",
+        "8717004002",
+        "8843577002",
+        "8847747002",
+        "8847738002",
+        "5646866002",
         "6865687002",
-        "8732364002",
-        "6544386002",
-        "8012658002",
         "6866534002",
-        "8863328002",
+        "6866549002",
         "8863326002",
         "8750820002",
-        "8459026002",
-        "8847747002",
-        "8133715002"
+        "8337425002",
+        "8732364002",
+        "8133691002",
+        "8145800002",
+        "8959902002",
+        "6866531002",
+        "6886281002",
+        "6865704002",
+        "8133715002",
+        "8012658002",
+        "8863328002",
+        "8787352002",
+        "7586263002",
+        "6866538002",
+        "6544386002"
       ],
       "hash": null
     },
@@ -252,7 +254,7 @@
     },
     "AWS (Amazon)": {
       "seen_ids": [],
-      "hash": "9614f7fc3c03ffcafff7daddd9d52e755737778cfd39d3dcce5c9ee93acf2426"
+      "hash": "8e1e3cc278051b3879912e97e6d7c239e82404a5b904131ffaa8a45cfa8c949a"
     }
   }
 }
